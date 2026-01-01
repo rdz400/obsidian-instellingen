@@ -1,0 +1,46 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "9-templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": false,
+  "folder_templates": [
+    {
+      "folder": "",
+      "template": ""
+    }
+  ],
+  "enable_file_templates": true,
+  "file_templates": [
+    {
+      "regex": "20\\d{2}[01]\\d\\d{2}",
+      "template": "9-templates/tpl-dagelijkse-notitie.md"
+    },
+    {
+      "regex": "p1.+",
+      "template": "9-templates/tpl-kanban-kaart.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "9-templates/tpl-algemeen.md",
+    "9-templates/tpl-inline-tijd.md",
+    "9-templates/tpl-project.md",
+    "9-templates/tpl-kanban-bord.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1,
+  "enable_ribbon_icon": true
+}

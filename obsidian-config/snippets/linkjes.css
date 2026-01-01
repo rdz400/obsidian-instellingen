@@ -1,0 +1,6 @@
+div.markdown-source-view a.cm-underline,
+div.markdown-reading-view a.internal-link,
+div.markdown-reading-view a.external-link
+{
+    --link-decoration: none;
+}

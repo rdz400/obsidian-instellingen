@@ -1,0 +1,17 @@
+.kanban-plugin__lane-items .kanban-plugin__markdown-preview-view {
+    --font-text-size: 12px !important;
+}
+
+div.kanban-plugin__item-metadata-wrapper .kanban-plugin__meta-table .markdown-preview-view a.internal-link {
+    font-size: 10px;
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item-metadata-wrapper {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.kanban-plugin__lane-items {
+    margin-inline-end: 1px;
+    margin-inline-start: 1px;
+}

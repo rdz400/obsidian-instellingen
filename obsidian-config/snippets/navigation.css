@@ -1,0 +1,35 @@
+/* .nav-folder-title {
+    --nav-item-weight: 500;
+}
+
+.nav-folder-title[data-path^="1-"] {
+    color: var(--magenta);
+    --nav-item-color-hover: color-mix(in srgb, var(--magenta) var(--fg-contrast-amount), var(--contrast-color));
+    --nav-item-background-hover: color-mix(in srgb, var(--magenta) var(--bg-contrast-amount), transparent);
+    --background-modifier-border-focus: color-mix(in srgb, var(--magenta) 40%, transparent);
+    --nav-collapse-icon-color: color-mix(in srgb, var(--magenta) 60%, transparent);
+}
+
+.nav-folder .nav-folder .nav-folder-title[data-path^="1-"] {
+    color: color-mix(in srgb, var(--magenta) 80%, transparent);
+}
+
+.nav-folder-title[data-path^="1-"]:hover {
+    --nav-collapse-icon-color: color-mix(in srgb, var(--magenta) 60%, var(--contrast-color));
+}
+    
+.tree-item-children .nav-folder:has(.nav-folder-title[data-path^="1-"]) .nav-file-title {
+    color: color-mix(in srgb, var(--magenta) var(--medium-contrast-amount), var(--default-text-color));
+}
+
+.tree-item-children .nav-folder:has(.nav-folder-title[data-path^="1-"]) {
+    --nav-indentation-guide-color: color-mix(in srgb, var(--magenta) var(--medium-contrast-amount), transparent);
+    --nav-item-background-hover: color-mix(in srgb, color-mix(in srgb, var(--magenta) 50%, var(--highlight)) var(--bg-contrast-amount), transparent);
+    --background-modifier-border-focus: color-mix(in srgb, var(--magenta) 40%, transparent);
+    --nav-item-background-active: color-mix(in srgb, var(--magenta) var(--active-contrast-amount), transparent);
+} */
+
+/* Voeg een onderrand toe aan folders in de root */
+.nav-files-container > div > .nav-folder > .nav-folder-title {
+    border-bottom: solid 1px color-mix(in srgb, var(--contrast-color) 20%, transparent);
+}

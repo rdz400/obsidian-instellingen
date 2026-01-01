@@ -1,0 +1,21 @@
+{
+  "accentColor": "#6a8695",
+  "textFontFamily": "",
+  "translucency": true,
+  "baseFontSize": 14,
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "custom",
+    "kanban",
+    "linkjes",
+    "main",
+    "navigation",
+    "tables"
+  ],
+  "baseFontSizeAction": true,
+  "theme": "system",
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "",
+  "showViewHeader": true,
+  "showRibbon": false
+}

@@ -1,0 +1,44 @@
+# standaard niets toelaten
+obsidian-config/*
+obsidian-templates/*
+
+# toestaan van configuratie
+!obsidian-config/
+!obsidian-config/app.json
+!obsidian-config/appearance.json
+!obsidian-config/community-plugins.json
+!obsidian-config/core-plugins.json
+!obsidian-config/daily-notes.json
+!obsidian-config/global-search.json
+!obsidian-config/hotkeys.json
+!obsidian-config/page-preview.json
+!obsidian-config/templates.json
+
+# snippets
+!obsidian-config/snippets/
+!obsidian-config/snippets/tables.css
+!obsidian-config/snippets/navigation.css
+!obsidian-config/snippets/main.css
+!obsidian-config/snippets/linkjes.css
+!obsidian-config/snippets/kanban.css
+
+# plugin-settings
+## sta plugins map toe
+!obsidian-config/plugins/
+## negeer alle andere plugins behalve templater-obsidian
+obsidian-config/plugins/*
+!obsidian-config/plugins/templater-obsidian/
+## negeer alles in templater-obsidian behalve data.json
+obsidian-config/plugins/templater-obsidian/*
+!obsidian-config/plugins/templater-obsidian/data.json
+
+# templates
+!obsidian-templates/
+!obsidian-templates/tpl-project.md
+!obsidian-templates/tpl-kanban-bord.md
+!obsidian-templates/tpl-kanban-kaart.md
+!obsidian-templates/tpl-inline-tijd.md
+!obsidian-templates/tpl-algemeen.md
+
+# overige
+.env

@@ -1,0 +1,38 @@
+filters:
+  and:
+    - or:
+        - file.folder == "0-werkruimte/0-kanbans"
+        - '!note["kanban-plugin"].isEmpty()'
+    - and:
+        - '!file.path.startsWith("9-templates")'
+views:
+  - type: table
+    name: Actief
+    filters:
+      and:
+        - file.folder != "0-werkruimte/0-kanbans/archief"
+    order:
+      - file.name
+      - datum
+      - file.backlinks
+      - project
+      - file.path
+    sort:
+      - property: datum
+        direction: DESC
+    columnSize:
+      file.name: 267
+      note.datum: 121
+      file.backlinks: 317
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.backlinks
+      - project
+      - type
+      - status
+      - datum
+    columnSize:
+      file.name: 267
+      file.backlinks: 317

@@ -1,0 +1,26 @@
+formulas:
+  root-folder: file.folder.split("/")[0]
+  unieke-links: file.links.unique()
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasLink(link(this.file))
+        - file.path.split('/')[0] != '0-dagelijks'
+    groupBy:
+      property: formula.root-folder
+      direction: ASC
+    order:
+      - file.name
+      - date
+      - type
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: date
+        direction: DESC
+      - property: file.links
+        direction: ASC
+    columnSize:
+      file.name: 335

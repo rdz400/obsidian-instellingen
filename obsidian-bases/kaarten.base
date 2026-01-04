@@ -1,0 +1,22 @@
+filters:
+  or:
+    - type == "kaart"
+    - file.path.startsWith('0-werkruimte/0-kaarten')
+formulas:
+  kanbanBacklinks: file.backlinks.filter(file(value).properties.type.startsWith('kanban'))
+  kanbanAantal: formula.kanbanBacklinks.length
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.backlinks
+      - formula.kanbanBacklinks
+      - type
+      - omschrijving
+      - project
+      - status
+      - date
+    columnSize:
+      file.backlinks: 217
+      formula.kanbanBacklinks: 221

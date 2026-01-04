@@ -1,0 +1,21 @@
+filters:
+  and:
+    - formula["basis-folder"] == "0-dagelijks"
+formulas:
+  basis-folder: file.path.split("/")[0]
+  unique-links: file.links.unique()
+  project-links: file.links.filter(file(value).properties.type == 'project').unique()
+  other-links: file.links.filter(file(value).properties.type != 'project').unique()
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - formula.project-links
+      - formula.other-links
+    sort:
+      - property: file.name
+        direction: DESC
+    columnSize:
+      file.name: 114
+      formula.project-links: 515

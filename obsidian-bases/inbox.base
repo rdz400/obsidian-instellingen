@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.folder.startsWith("0-inbox")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.ctime
+      - date
+      - file.backlinks
+      - file.links
+      - file.tags
+      - type
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: file.mtime
+        direction: DESC
+      - property: date
+        direction: ASC

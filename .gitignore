@@ -1,6 +1,7 @@
 # standaard niets toelaten
 obsidian-config/*
 obsidian-templates/*
+obsidian-bases/*
 
 # toestaan van configuratie
 !obsidian-config/
@@ -39,6 +40,15 @@ obsidian-config/plugins/templater-obsidian/*
 !obsidian-templates/tpl-kanban-kaart.md
 !obsidian-templates/tpl-inline-tijd.md
 !obsidian-templates/tpl-algemeen.md
+
+# bases
+!obsidian-bases/inbox.base
+!obsidian-bases/index.base
+!obsidian-bases/kaarten.base
+!obsidian-bases/kanbans.base
+!obsidian-bases/dagelijkse-notities.base
+!obsidian-bases/recente-notities.base
+!obsidian-bases/embed-project-ref.base
 
 # overige
 .env

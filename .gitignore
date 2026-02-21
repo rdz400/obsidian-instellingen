@@ -52,3 +52,4 @@ obsidian-config/plugins/templater-obsidian/*
 
 # overige
 .env
+.DS_Store

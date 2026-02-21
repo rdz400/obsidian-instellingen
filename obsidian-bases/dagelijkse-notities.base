@@ -6,16 +6,22 @@ formulas:
   unique-links: file.links.unique()
   project-links: file.links.filter(file(value).properties.type == 'project').unique()
   other-links: file.links.filter(file(value).properties.type != 'project').unique()
+  weekdag: datum.format('dddd')
 views:
   - type: table
     name: Table
     order:
       - file.name
+      - formula.weekdag
       - formula.project-links
       - formula.other-links
+      - file.backlinks
+      - gewicht
     sort:
       - property: file.name
         direction: DESC
     columnSize:
       file.name: 114
-      formula.project-links: 515
+      formula.project-links: 332
+      formula.other-links: 483
+    rowHeight: medium

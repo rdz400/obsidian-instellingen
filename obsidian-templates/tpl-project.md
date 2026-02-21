@@ -7,7 +7,6 @@ gebieden:
 omschrijving:
 status: backlog
 links:
-kanbans:
 ---
 
 ## log

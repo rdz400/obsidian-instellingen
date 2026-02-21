@@ -6,12 +6,16 @@ views:
     name: Table
     filters:
       and:
-        - date >= (today() - duration('21d'))
+        - datum >= (today() - duration('21d'))
     order:
       - file.name
-      - date
       - file.folder
+      - datum
+      - file.links
+      - file.backlinks
     sort:
+      - property: datum
+        direction: DESC
       - property: date
         direction: DESC
     columnSize:

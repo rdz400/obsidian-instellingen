@@ -28,6 +28,10 @@
     {
       "regex": "p1.+",
       "template": "9-templates/tpl-kanban-kaart.md"
+    },
+    {
+      "regex": "Untitled.+",
+      "template": "9-templates/tpl-algemeen.md"
     }
   ],
   "syntax_highlighting": true,
@@ -36,7 +40,8 @@
     "9-templates/tpl-algemeen.md",
     "9-templates/tpl-inline-tijd.md",
     "9-templates/tpl-project.md",
-    "9-templates/tpl-kanban-bord.md"
+    "9-templates/tpl-kanban-bord.md",
+    "9-templates/tpl-inline-datum.md"
   ],
   "startup_templates": [
     ""

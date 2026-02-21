@@ -1,8 +1,7 @@
 filters:
   and:
     - or:
-        - file.folder == "0-werkruimte/0-kanbans"
-        - '!note["kanban-plugin"].isEmpty()'
+        - file.folder == "0-werkruimte/kanbans"
     - and:
         - '!file.path.startsWith("9-templates")'
 views:
@@ -10,7 +9,7 @@ views:
     name: Actief
     filters:
       and:
-        - file.folder != "0-werkruimte/0-kanbans/archief"
+        - file.folder != "0-werkruimte/kanbans/archief"
     order:
       - file.name
       - datum

@@ -30,7 +30,13 @@
     --h1-weight: 800;
     --h2-weight: 600;
     --link-decoration: none;
-    --font-text-size: 12px !important;
+    --link-external-decoration: none;
+    --link-weight: bold;
+    --font-text-size: 14px !important;
+}
+
+body.is-mobile .bases-table-cell.bases-rendered-value {
+    font-size: 13px;
 }
 
 .theme-light {

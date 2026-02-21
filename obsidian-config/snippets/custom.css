@@ -21,22 +21,15 @@
 }
 
 .breed {
-    --file-line-width: 1000px;
-    --table-text-size: 0.8em;
+    --file-line-width: 900px;
+    --table-text-size: 0.9rem;
 }
 
 .theme-light .breed {
---table-row-alt-background: #fcfcfc;
-}
-
-.theme-light .breed table tbody tr:nth-child(7n) td{
-  border-bottom: 2px solid #333;
+  --table-row-alt-background: #fcfcfc;
 }
 
 .theme-dark .breed {
   --table-row-alt-background: #272626; /* or another dark shade */
 }
 
-.theme-dark .breed table tbody tr:nth-child(7n) td {
-  border-bottom: 2px solid #ccc; /* lighter border for contrast on dark background */
-}

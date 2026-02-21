@@ -13,7 +13,7 @@ views:
       direction: ASC
     order:
       - file.name
-      - date
+      - datum
       - type
     sort:
       - property: file.name
@@ -24,3 +24,28 @@ views:
         direction: ASC
     columnSize:
       file.name: 335
+  - type: table
+    name: InclusiefDagelijks
+    filters:
+      and:
+        - file.hasLink(link(this.file))
+    groupBy:
+      property: formula.root-folder
+      direction: ASC
+    order:
+      - file.name
+      - datum
+      - type
+      - file.tags
+      - file.links
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: date
+        direction: DESC
+      - property: file.links
+        direction: ASC
+    columnSize:
+      file.name: 279
+      note.datum: 105
+      note.type: 82

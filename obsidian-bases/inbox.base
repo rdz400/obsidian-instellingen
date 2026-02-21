@@ -6,16 +6,25 @@ views:
     name: Table
     order:
       - file.name
+      - datum
       - file.ctime
-      - date
       - file.backlinks
       - file.links
       - file.tags
       - type
+      - file.basename
     sort:
+      - property: datum
+        direction: DESC
+      - property: file.basename
+        direction: DESC
+      - property: file.name
+        direction: ASC
       - property: file.ctime
         direction: DESC
       - property: file.mtime
         direction: DESC
       - property: date
         direction: ASC
+    columnSize:
+      file.name: 384

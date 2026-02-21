@@ -15,3 +15,23 @@ views:
       - formula.hoofdFolder
       - file.backlinks
       - file.links
+    columnSize:
+      file.name: 293
+  - type: cards
+    name: Lijst
+    groupBy:
+      property: formula.hoofdFolder
+      direction: ASC
+    order:
+      - file.name
+    cardSize: 170
+    imageAspectRatio: 0.95
+  - type: cards
+    name: LijstEenvoudMobiel
+    groupBy:
+      property: formula.hoofdFolder
+      direction: ASC
+    order:
+      - file.basename
+    cardSize: 170
+    imageAspectRatio: 0.95

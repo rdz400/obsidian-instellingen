@@ -46,6 +46,6 @@ views:
       - property: file.links
         direction: ASC
     columnSize:
-      file.name: 279
+      file.name: 333
       note.datum: 105
       note.type: 82

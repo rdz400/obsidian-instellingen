@@ -7,7 +7,8 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "0-inbox",
   "userIgnoreFilters": [
-    "9-bijlagen/"
+    "9-bijlagen/",
+    "9-sjablonen/"
   ],
   "mobileToolbarCommands": [
     "editor:insert-wikilink",

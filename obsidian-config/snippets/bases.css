@@ -1,0 +1,12 @@
+body.theme-light {
+  /* --bases-card-bg: var(--background-primary); */
+  --bases-card-bg: color-mix(in srgb, var(--background-primary) 93%, rebeccapurple 7%);
+}
+
+body.theme-dark {
+  --bases-card-bg: color-mix(in srgb, var(--background-primary) 89%, rebeccapurple 11%);
+}
+
+.bases-view[data-view-type="cards"] .bases-cards-item {
+  background: var(--bases-card-bg);
+}

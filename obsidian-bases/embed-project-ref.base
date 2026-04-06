@@ -18,8 +18,6 @@ views:
     sort:
       - property: file.name
         direction: ASC
-      - property: date
-        direction: DESC
       - property: file.links
         direction: ASC
     columnSize:
@@ -41,11 +39,9 @@ views:
     sort:
       - property: file.name
         direction: ASC
-      - property: date
-        direction: DESC
       - property: file.links
         direction: ASC
     columnSize:
-      file.name: 279
+      file.name: 333
       note.datum: 105
       note.type: 82

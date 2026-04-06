@@ -1,0 +1,60 @@
+.kleur {
+    --h1-color: #743df4;
+    --h2-color: #743df4;
+    --h3-color: #8B5CF6;
+    --h4-color: #8B5CF6;
+    --h5-color: #8B5CF6;
+    --h6-color: #8B5CF6;
+}
+
+/* Reading modus */
+.kleur h1,
+.kleur h2 {
+    background-color: #e6e2fa;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+}
+
+.kleur h3,
+.kleur h4,
+.kleur h5,
+.kleur h6 {
+    background-color: #F5F3FF;
+    padding: 0.2em 0.5em;
+}
+
+/* Live Preview modus */
+
+.kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-1),
+.kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-2) {
+    background-color: #e6e2fa;
+    padding: 0.2em 0.5em;
+}
+
+.kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-3),
+.kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-4),
+.kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-5),
+.kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-6) {
+    background-color: #F5F3FF;
+    padding: 0.2em 0.5em;
+}
+
+/* Dark Theme - Reading modus */
+.theme-dark .kleur h1,
+.theme-dark .kleur h2,
+.theme-dark .kleur h3,ß
+.theme-dark .kleur h4,
+.theme-dark .kleur h5,
+.theme-dark .kleur h6 {
+    background-color: #2D1B4E;
+}
+
+/* Dark Theme - Live Preview modus */
+.theme-dark .kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-1),
+.theme-dark .kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-2),
+.theme-dark .kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-3),
+.theme-dark .kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-4),
+.theme-dark .kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-5),
+.theme-dark .kleur.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-6) {
+    background-color: #2D1B4E;
+}

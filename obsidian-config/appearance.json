@@ -10,7 +10,9 @@
     "linkjes",
     "main",
     "navigation",
-    "tables"
+    "tables",
+    "kleur",
+    "bases"
   ],
   "baseFontSizeAction": true,
   "theme": "system",

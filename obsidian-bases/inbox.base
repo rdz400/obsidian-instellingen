@@ -24,7 +24,5 @@ views:
         direction: DESC
       - property: file.mtime
         direction: DESC
-      - property: date
-        direction: ASC
     columnSize:
       file.name: 384

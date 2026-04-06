@@ -16,8 +16,5 @@ views:
     sort:
       - property: datum
         direction: DESC
-      - property: date
-        direction: DESC
     columnSize:
       file.name: 416
-      note.date: 186

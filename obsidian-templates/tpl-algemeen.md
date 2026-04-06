@@ -1,4 +1,3 @@
 ---
-datum: <% tp.date.now() %>
+datum: {{date}}
 ---
-<% tp.file.rename(`${tp.date.now("YYMMDD")}-${tp.date.now("ssSS")}`) %>

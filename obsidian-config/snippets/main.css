@@ -16,6 +16,7 @@
     --popover-height: 500px;
     --popover-font-size: 0.8em;
     --link-decoration: none;
+    --link-external-decoration: none;
     --bases-table-font-size: var(--font-smallest) ;
     --h3-color: var(--text-muted);
 }
@@ -29,8 +30,6 @@
     --h6-size: 1em;
     --h1-weight: 800;
     --h2-weight: 600;
-    --link-decoration: none;
-    --link-external-decoration: none;
     --link-weight: bold;
     --font-text-size: 14px !important;
 }
@@ -49,7 +48,6 @@ body.is-mobile .bases-table-cell.bases-rendered-value {
     --cyan: #fafafa;
     --fg: #383a42;
     --bg: #fafafa;
-    
     --contrast-color: var(--shadow);
     --bg-contrast-amount: 70%;
     --fg-contrast-amount: 30%;
@@ -69,7 +67,6 @@ body.is-mobile .bases-table-cell.bases-rendered-value {
     --white: #dcdfe4;
     --fg: #dcdfe4;
     --bg: #282c34;
-    
     --contrast-color: var(--highlight);
     --bg-contrast-amount: 15%;
     --fg-contrast-amount: 40%;

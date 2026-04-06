@@ -1,5 +1,5 @@
 ---
-datum: <% tp.date.now() %>
+datum: {{date}}
 type: project
 eind:
 streefdatum:

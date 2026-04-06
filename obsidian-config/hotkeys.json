@@ -122,14 +122,6 @@
       "key": "ArrowUp"
     }
   ],
-  "templater-obsidian:insert-templater": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "E"
-    }
-  ],
   "editor:toggle-source": [
     {
       "modifiers": [
@@ -200,23 +192,6 @@
     }
   ],
   "file-explorer:new-file": [],
-  "templater-obsidian:create-9-templater/algemeen.md": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "N"
-    }
-  ],
-  "templater-obsidian:9-templater/inline/inline-time.md": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "T"
-    }
-  ],
   "bookmarks:open": [
     {
       "modifiers": [
@@ -235,14 +210,6 @@
       "key": "M"
     }
   ],
-  "templater-obsidian:create-new-note-from-template": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "N"
-    }
-  ],
   "editor:toggle-fold": [
     {
       "modifiers": [
@@ -258,15 +225,6 @@
         "Shift"
       ],
       "key": "-"
-    }
-  ],
-  "templater-obsidian:create-9-templater/tpl-nieuw-project.md": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "P"
     }
   ],
   "workspace:edit-file-title": [
@@ -300,6 +258,12 @@
       "modifiers": [
         "Alt",
         "Shift"
+      ],
+      "key": "S"
+    },
+    {
+      "modifiers": [
+        "Mod"
       ],
       "key": "S"
     }
@@ -370,7 +334,27 @@
       "key": "N"
     }
   ],
-  "templater-obsidian:create-9-templates/tpl-algemeen.md": [
+  "editor:delete-paragraph": [],
+  "editor:save-file": [],
+  "bases:add-item": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "N"
+    }
+  ],
+  "editor:context-menu": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": ","
+    }
+  ],
+  "zk-prefixer": [
     {
       "modifiers": [
         "Mod"
@@ -378,7 +362,7 @@
       "key": "N"
     }
   ],
-  "templater-obsidian:9-templates/tpl-inline-tijd.md": [
+  "insert-current-time": [
     {
       "modifiers": [
         "Mod",
@@ -386,33 +370,5 @@
       ],
       "key": "T"
     }
-  ],
-  "templater-obsidian:create-9-templates/tpl-project.md": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "P"
-    }
-  ],
-  "templater-obsidian:create-9-templates/tpl-kanban-bord.md": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "K"
-    }
-  ],
-  "templater-obsidian:9-templates/tpl-inline-datum.md": [
-    {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "D"
-    }
-  ],
-  "editor:delete-paragraph": []
+  ]
 }

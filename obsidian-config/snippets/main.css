@@ -1,13 +1,30 @@
 :root{
-    --highlight: #fff;
-    --shadow: #0b0c2c;
+    --highlight: #faf9f5;
+    --shadow: #141413;
+}
+
+.theme-light, .theme-dark {
+  --ant-ink:         #141413;
+  --ant-cream:       #faf9f5;
+  --ant-linen:       #e8e6dc;
+  --ant-greige:      #b0aea5;
+  --ant-stone:       #888780;
+  --ant-terracotta:  #d97757;
+  --ant-blue:        #6a9bcc;
+  --ant-sage:        #788c5d;
+  --ant-surface-1:   #f4f2ec;
+  --ant-surface-2:   #edeae0;
+  --ant-surface-dark-1: #2d2b27;
+  --ant-surface-dark-2: #272521;
+  --ant-border:      rgba(20, 20, 19, 0.10);
+  --ant-border-mid:  rgba(20, 20, 19, 0.18);
 }
 
 :root body {
-    --h1-size: 1.6em;
-    --h2-size: 1.3em;
-    --h3-size: 1.2em;
-    --h4-size: 1.15em;
+    --h1-size: 1.4em;
+    --h2-size: 1.25em;
+    --h3-size: 1.1em;
+    --h4-size: 1.1em;
     --h5-size: 1.1em;
     --h6-size: 1em;
     --h1-weight: 800;
@@ -21,15 +38,34 @@
     --h3-color: var(--text-muted);
 }
 
+
+.theme-light {
+
+  --background-primary: var(--ant-cream);
+  --text-normal:                 var(--ant-ink);
+  --text-muted:                  var(--ant-stone);
+  --text-faint:                  var(--ant-greige);
+  --text-accent:                 var(--ant-terracotta);
+  --text-accent-hover:           #bf6342;
+
+  --interactive-accent:          var(--ant-terracotta);
+  --interactive-accent-hover:    #bf6342;
+  --interactive-accent-rgb:      217, 119, 87;
+
+  --contrast-color: var(--shadow);
+
+  --code-background:    var(--ant-surface-2);
+  --code-normal:        var(--ant-ink);
+  --code-comment:       var(--ant-stone);
+  --code-tag:           var(--ant-terracotta);
+  --code-string:        var(--ant-sage);
+  --code-keyword:       var(--ant-terracotta);
+  --code-function:      var(--ant-sage);
+  --code-important:     var(--ant-terracotta);
+  --code-property:      var(--ant-blue);
+}
+
 :root body.is-mobile {
-    --h1-size: 1.6em;
-    --h2-size: 1.3em;
-    --h3-size: 1.2em;
-    --h4-size: 1.15em;
-    --h5-size: 1.1em;
-    --h6-size: 1em;
-    --h1-weight: 800;
-    --h2-weight: 600;
     --link-weight: bold;
     --font-text-size: 14px !important;
 }
@@ -38,38 +74,43 @@ body.is-mobile .bases-table-cell.bases-rendered-value {
     font-size: 13px;
 }
 
-.theme-light {
-    --black: #383a42;
-    --red: #e45649;
-    --green: #50a14f;
-    --yellow: #c18401;
-    --blue:#0184bc;
-    --magenta:#a626a4;
-    --cyan: #fafafa;
-    --fg: #383a42;
-    --bg: #fafafa;
-    --contrast-color: var(--shadow);
-    --bg-contrast-amount: 70%;
-    --fg-contrast-amount: 30%;
-    --medium-contrast-amount: 60%;
-    --active-contrast-amount: 30%;
+.theme-dark {
+
+  --background-primary: var(--ant-surface-dark-2);
+  --text-normal:              var(--ant-cream);
+  --text-muted:               var(--ant-stone);
+  --text-faint:               var(--ant-greige);
+  --text-accent:              var(--ant-terracotta);
+  --text-accent-hover:        #bf6342;
+
+  --interactive-accent:       var(--ant-terracotta);
+  --interactive-accent-hover: #bf6342;
+  --interactive-accent-rgb:   217, 119, 87;
+
+  --contrast-color:           var(--highlight);
+
+  --code-background:    var(--ant-surface-dark-1);
+  --code-normal:        var(--ant-cream);
+  --code-comment:       var(--ant-stone);
+  --code-tag:           var(--ant-terracotta);
+  --code-string:        var(--ant-sage);
+  --code-keyword:       var(--ant-terracotta);
+  --code-function:      var(--ant-sage);
+  --code-important:     var(--ant-terracotta);
+  --code-property:      var(--ant-blue);
 }
 
-.theme-dark {
-    --nav-item-size: 12px;
-    --black: #282c34;
-    --red: #e06c75;
-    --green: #98c379;
-    --yellow: #e5c07b;
-    --blue: #61afef;
-    --magenta: #c678dd;
-    --cyan: #56b6c2;
-    --white: #dcdfe4;
-    --fg: #dcdfe4;
-    --bg: #282c34;
-    --contrast-color: var(--highlight);
-    --bg-contrast-amount: 15%;
-    --fg-contrast-amount: 40%;
-    --medium-contrast-amount: 20%;
-    --active-contrast-amount: 10%;
+.theme-light .HyperMD-list-line .list-bullet:after,
+.theme-dark .HyperMD-list-line .list-bullet:after {
+  background-color: var(--ant-terracotta) !important;
+}
+
+
+.theme-light ul > li::marker,
+.theme-dark ul > li::marker {
+  color: var(--ant-terracotta);
+}
+
+.markdown-reading-view .list-bullet::after {
+  background-color: var(--ant-terracotta) !important;
 }

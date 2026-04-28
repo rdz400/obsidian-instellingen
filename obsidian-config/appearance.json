@@ -1,20 +1,21 @@
 {
-  "accentColor": "#6a8695",
+  "accentColor": "#d97757",
   "textFontFamily": "",
   "translucency": true,
   "baseFontSize": 14,
   "cssTheme": "",
   "enabledCssSnippets": [
-    "custom",
     "kanban",
     "linkjes",
-    "main",
-    "navigation",
     "tables",
+    "bases",
+    "strak",
     "kleur",
-    "bases"
+    "main",
+    "custom",
+    "callouts"
   ],
-  "baseFontSizeAction": true,
+  "baseFontSizeAction": false,
   "theme": "system",
   "interfaceFontFamily": "",
   "monospaceFontFamily": "",

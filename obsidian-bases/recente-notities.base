@@ -6,15 +6,24 @@ views:
     name: Table
     filters:
       and:
-        - datum >= (today() - duration('21d'))
+        - datum >= (today() - duration('28d'))
     order:
       - file.name
       - file.folder
+      - omschrijving
       - datum
+      - type
       - file.links
       - file.backlinks
+      - gebieden
+      - file.tags
     sort:
       - property: datum
         direction: DESC
     columnSize:
-      file.name: 416
+      file.name: 286
+      file.folder: 152
+      note.omschrijving: 156
+      file.links: 360
+      file.backlinks: 205
+      note.type: 72

@@ -2,8 +2,6 @@ filters:
   and:
     - or:
         - file.folder == "0-werkruimte/kanbans"
-    - and:
-        - '!file.path.startsWith("9-templates")'
 views:
   - type: table
     name: Actief

@@ -1,0 +1,116 @@
+/* ============================================================
+   Strak Layout — Obsidian CSS Snippet
+   Place in: <vault>/.obsidian/snippets/dense-layout.css
+   Then enable in Settings → Appearance → CSS Snippets
+
+   Activate per-note by adding to frontmatter:
+     cssclasses: strak
+   ============================================================ */
+
+/* ── Tune these variables to your taste ─────────────────── */
+.strak {
+  --strak-line-height: 1.2;         /* default Obsidian is ~1.6–1.7  */
+  --strak-line-height-tight: 1.3;   /* headings & code blocks         */
+  --strak-paragraph-spacing: 0.5em; /* space between paragraphs       */
+  --strak-list-spacing: 0.1em;      /* space between list items       */
+  --strak-list-nested-indent: 1.2em;/* indentation for nested lists   */
+
+  /* Override Obsidian's own line-height tokens so inherited styles
+     also pick up the tighter values without needing !important */
+  --line-height-normal: var(--strak-line-height);
+  --line-height-tight: var(--strak-line-height-tight);
+}
+
+/* ── Reading mode ────────────────────────────────────────── */
+.strak.markdown-reading-view .markdown-preview-view,
+.strak.markdown-reading-view .markdown-preview-section {
+  line-height: var(--strak-line-height);
+}
+
+/* Paragraphs */
+.strak.markdown-reading-view .markdown-preview-view p {
+  line-height: var(--strak-line-height);
+  margin-top: var(--strak-paragraph-spacing);
+  margin-bottom: var(--strak-paragraph-spacing);
+}
+
+/* Headings */
+.strak.markdown-reading-view .markdown-preview-view h1,
+.strak.markdown-reading-view .markdown-preview-view h2,
+.strak.markdown-reading-view .markdown-preview-view h3,
+.strak.markdown-reading-view .markdown-preview-view h4,
+.strak.markdown-reading-view .markdown-preview-view h5,
+.strak.markdown-reading-view .markdown-preview-view h6 {
+  line-height: var(--strak-line-height-tight);
+}
+
+/* Blockquotes */
+.strak.markdown-reading-view .markdown-preview-view blockquote {
+  line-height: var(--strak-line-height);
+}
+
+/* ── Lists (reading mode) ────────────────────────────────── */
+/* Tighten the list container itself */
+.strak.markdown-reading-view .markdown-preview-view ul,
+.strak.markdown-reading-view .markdown-preview-view ol {
+  margin-top: var(--strak-list-spacing);
+  margin-bottom: var(--strak-list-spacing);
+  padding-left: var(--strak-list-nested-indent);
+}
+
+/* Each list item */
+.strak.markdown-reading-view .markdown-preview-view li {
+  line-height: var(--strak-line-height);
+  margin-top: var(--strak-list-spacing);
+  margin-bottom: var(--strak-list-spacing);
+}
+
+/* Nested ul/ol inside an li — reset top margin so they hug the parent item */
+.strak.markdown-reading-view .markdown-preview-view li > ul,
+.strak.markdown-reading-view .markdown-preview-view li > ol {
+  margin-top: var(--strak-list-spacing);
+  margin-bottom: 0;
+}
+
+/* Task list checkboxes (Obsidian adds extra padding here) */
+.strak.markdown-reading-view .markdown-preview-view .task-list-item {
+  margin-top: var(--strak-list-spacing);
+  margin-bottom: var(--strak-list-spacing);
+}
+
+/* ── Live Preview mode (CodeMirror 6) ────────────────────── */
+.strak.markdown-source-view.mod-cm6 .cm-editor,
+.strak.markdown-source-view.mod-cm6 .cm-content,
+.strak.markdown-source-view.mod-cm6 .cm-line {
+  line-height: var(--strak-line-height) !important;
+}
+
+/* Headings inside CM6 live preview */
+.strak.markdown-source-view.mod-cm6 .HyperMD-header {
+  line-height: var(--strak-line-height-tight) !important;
+  padding-bottom: 0.4em !important;
+}
+
+/* List lines in CM6 — HyperMD-list-line covers all nesting levels */
+.strak.markdown-source-view.mod-cm6 .HyperMD-list-line {
+  line-height: var(--strak-line-height) !important;
+  padding-top: var(--strak-list-spacing) !important;
+  padding-bottom: var(--strak-list-spacing) !important;
+}
+
+/* Code blocks in live preview */
+.strak.markdown-source-view.mod-cm6 .cm-codeblock,
+.strak.markdown-source-view.mod-cm6 .HyperMD-codeblock {
+  line-height: var(--strak-line-height-tight) !important;
+}
+
+/* ── Code blocks (both modes) ────────────────────────────── */
+.strak.markdown-reading-view pre,
+.strak.markdown-reading-view pre code {
+  line-height: var(--strak-line-height-tight);
+}
+
+/* ── Embedded notes / transclusions ─────────────────────── */
+.strak .markdown-embed .markdown-preview-view {
+  line-height: var(--strak-line-height);
+}

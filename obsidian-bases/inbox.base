@@ -8,11 +8,12 @@ views:
       - file.name
       - datum
       - file.ctime
+      - type
       - file.backlinks
       - file.links
       - file.tags
-      - type
       - file.basename
+      - links
     sort:
       - property: datum
         direction: DESC

@@ -45,3 +45,22 @@ views:
       file.name: 333
       note.datum: 105
       note.type: 82
+  - type: cards
+    name: Lijst
+    filters:
+      and:
+        - file.hasLink(link(this.file))
+        - file.path.split('/')[0] != '0-dagelijks'
+    groupBy:
+      property: formula.root-folder
+      direction: ASC
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: file.links
+        direction: ASC
+    columnSize:
+      file.name: 335
+    cardSize: 280

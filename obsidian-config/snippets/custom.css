@@ -5,12 +5,10 @@
     --list-spacing: 0.1em;
     --heading-spacing: calc(var(--p-spacing) * 2.3);
     --file-folding-offset: 16px;
-    --h2-size: 1.25em;
     --tag-padding-x: 0.4em;
     --tag-padding-y: 0.2em;
     --tag-radius: 0.3em;
     --tag-size: 0.8em;
-    --link-decoration: none;
     --link-weight: 600;
 }
 
@@ -33,3 +31,8 @@
   --table-row-alt-background: #272626; /* or another dark shade */
 }
 
+
+.kleiner {
+    --line-height-normal: 1.3;
+    --font-text-size: 14px;
+}

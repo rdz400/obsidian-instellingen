@@ -1,0 +1,109 @@
+/* Callouts — earthy, cozy, minimal (Anthropic style)
+   Depends on --ant-* tokens defined in main.css.
+   Left accent stripe carries the colour; all other surfaces stay linen/warm.
+   ------------------------------------------------------------------ */
+
+/* ── Base callout reset ─────────────────────────────────────────── */
+
+.callout {
+  --callout-color: var(--ant-blue);
+  background-color: var(--ant-surface-1);
+  border: 1px solid var(--ant-border);
+  border-left: 3px solid var(--callout-color);
+  border-radius: var(--radius-s);
+  box-shadow: none;
+}
+
+.theme-dark .callout {
+  background-color: var(--ant-surface-dark-1);
+  border-color: var(--ant-border);
+  border-left-color: var(--callout-color);
+}
+
+/* ── Title ──────────────────────────────────────────────────────── */
+
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--callout-color);
+  margin-bottom: var(--size-2-1);
+}
+
+.callout-title-inner {
+  color: inherit;
+}
+
+.callout-icon {
+  display: none;
+}
+
+/* ── Body ───────────────────────────────────────────────────────── */
+
+.callout-content {
+  font-size: var(--font-small);
+  line-height: var(--line-height-normal);
+  color: var(--text-normal);
+}
+
+.callout-content > p:first-child {
+  margin-top: var(--size-2-2);
+}
+
+.callout-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Fold toggle ────────────────────────────────────────────────── */
+
+.callout-fold {
+  color: var(--text-faint);
+}
+
+/* ── Per-type accent colours ────────────────────────────────────── */
+
+/* Note / Info */
+.callout[data-callout="note"],
+.callout[data-callout="info"] {
+  --callout-color: var(--ant-blue);
+}
+
+/* Tip / Hint / Success */
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-color: var(--ant-sage);
+}
+
+/* Warning / Danger / Error */
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="important"] {
+  --callout-color: var(--ant-terracotta);
+}
+
+/* Quote / Example / Todo / Question / etc. */
+.callout[data-callout="quote"],
+.callout[data-callout="cite"],
+.callout[data-callout="example"],
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"],
+.callout[data-callout="todo"],
+.callout[data-callout="question"],
+.callout[data-callout="faq"],
+.callout[data-callout="help"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] {
+  --callout-color: var(--ant-stone);
+}

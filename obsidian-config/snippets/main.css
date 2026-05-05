@@ -14,8 +14,10 @@
   --ant-sage:        #788c5d;
   --ant-surface-1:   #f4f2ec;
   --ant-surface-2:   #edeae0;
+  --ant-surface-dark-0: #232120;
   --ant-surface-dark-1: #2d2b27;
   --ant-surface-dark-2: #272521;
+  --ant-highlight:      #f3f1eb;
   --ant-border:      rgba(20, 20, 19, 0.10);
   --ant-border-mid:  rgba(20, 20, 19, 0.18);
 }
@@ -41,7 +43,10 @@
 
 .theme-light {
 
-  --background-primary: var(--ant-cream);
+  --background-primary:     var(--ant-cream);
+  --background-primary-alt: var(--ant-surface-1);
+  --background-secondary:   var(--ant-surface-1);
+  --background-secondary-alt: var(--ant-surface-2);
   --text-normal:                 var(--ant-ink);
   --text-muted:                  var(--ant-stone);
   --text-faint:                  var(--ant-greige);
@@ -76,7 +81,10 @@ body.is-mobile .bases-table-cell.bases-rendered-value {
 
 .theme-dark {
 
-  --background-primary: var(--ant-surface-dark-2);
+  --background-primary:     var(--ant-surface-dark-2);
+  --background-primary-alt: var(--ant-surface-dark-1);
+  --background-secondary:   var(--ant-surface-dark-1);
+  --background-secondary-alt: var(--ant-surface-dark-0);
   --text-normal:              var(--ant-cream);
   --text-muted:               var(--ant-stone);
   --text-faint:               var(--ant-greige);
@@ -113,4 +121,20 @@ body.is-mobile .bases-table-cell.bases-rendered-value {
 
 .markdown-reading-view .list-bullet::after {
   background-color: var(--ant-terracotta) !important;
+}
+
+/* Hide "properties" title */
+
+.metadata-properties-heading {
+    display: none;
+}
+
+.metadata-properties {
+    --metadata-gap: 0px;
+    --metadata-label-font-size: 11px;
+    --metadata-input-font-size: 11px;
+}
+
+body:not(.is-mobile) .metadata-add-button {
+  display: none;
 }

@@ -1,0 +1,6 @@
+.bases-tr:has(
+  .bases-td .bases-table-cell [data-overdue="1"]
+) {
+  background-color: yellow;
+
+}

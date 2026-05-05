@@ -7,13 +7,14 @@
   "enabledCssSnippets": [
     "kanban",
     "linkjes",
-    "tables",
     "bases",
-    "strak",
+    "callouts",
     "kleur",
-    "main",
+    "strak",
     "custom",
-    "callouts"
+    "main",
+    "planning",
+    "base-conditional"
   ],
   "baseFontSizeAction": false,
   "theme": "system",

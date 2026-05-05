@@ -1,0 +1,13 @@
+filters:
+  and:
+    - type == "dagrooster"
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.folder
+      - datum
+    sort:
+      - property: datum
+        direction: DESC

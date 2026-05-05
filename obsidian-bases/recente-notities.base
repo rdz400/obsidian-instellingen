@@ -10,9 +10,9 @@ views:
     order:
       - file.name
       - file.folder
+      - type
       - omschrijving
       - datum
-      - type
       - file.links
       - file.backlinks
       - gebieden
@@ -23,7 +23,7 @@ views:
     columnSize:
       file.name: 286
       file.folder: 152
+      note.type: 104
       note.omschrijving: 156
       file.links: 360
       file.backlinks: 205
-      note.type: 72

@@ -1,4 +1,5 @@
 {
   "folder": "9-sjablonen",
-  "timeFormat": "`HH:mm`"
+  "timeFormat": "`HH:mm`",
+  "dateFormat": "\\[\\[YYYYMMDD\\]\\]"
 }

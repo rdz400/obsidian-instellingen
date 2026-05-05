@@ -1,10 +1,10 @@
 body.theme-light {
   /* --bases-card-bg: var(--background-primary); */
-  --bases-card-bg: color-mix(in srgb, var(--background-primary) 93%, #c8b49a 7%);
+  --bases-card-bg: color-mix(in srgb, var(--background-primary) 93%, var(--ant-greige) 7%);
 }
 
 body.theme-dark {
-  --bases-card-bg: color-mix(in srgb, var(--background-primary) 89%, #272521 11%);
+  --bases-card-bg: color-mix(in srgb, var(--background-primary) 89%, var(--ant-surface-dark-2) 11%);
 }
 
 .bases-view[data-view-type="cards"] .bases-cards-item {
@@ -13,4 +13,62 @@ body.theme-dark {
 
 .bases-view span.internal-link, .bases-view div.internal-link {
   text-decoration: none;
+}
+
+.obsidian-app {
+  /* --bases-table-row-height: var(--size-4-6); */
+  --bases-table-row-height: var(--size-4-6);
+  --bases-table-column-border-width: 0;
+  --bases-table-header-icon-display: none;
+}
+
+
+
+.bases-td[data-property="note.vandaag"] input:checked {
+  background-color: red;
+}
+
+/* .bases-td[data-property="note.vandaag"]:has(input[type="checkbox"]:checked) {
+  background-color: rgba(0, 200, 0, 0.2);
+} */
+
+
+.bases-tr:has(
+
+  .bases-td[data-property="note.vandaag"] input:checked
+
+) {
+  background-color: var(--ant-highlight);
+
+}
+
+/* Aanpassingen toolbar obsidian bases */
+
+.bases-header {
+  --bases-header-height: 30px;
+  --bases-toolbar-label-display: none;
+}
+
+.bases-toolbar .text-icon-button {
+  font-size: 0.8em;
+}
+
+.bases-toolbar .text-icon-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+.baseklein .bases-header{
+  display: none;
+}
+
+
+.bases-tr:has(
+
+  .bases-td[data-property="note.vandaag"] input:checked
+
+) {
+  background-color: var(--ant-highlight);
+
 }

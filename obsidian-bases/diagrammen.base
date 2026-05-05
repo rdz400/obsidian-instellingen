@@ -1,0 +1,18 @@
+filters:
+  and:
+    - file.ext == "svg"
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.ctime
+      - file.mtime
+      - file.backlinks
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      file.name: 421

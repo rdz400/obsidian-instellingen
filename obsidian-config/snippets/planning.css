@@ -1,0 +1,133 @@
+/* planning.css — Calendar-style planning view (cssclass: planning)
+   H2 = Month, H3 = Week, H4 = Day
+   Design: D (calendar band + dashed week + pip) with C's terracotta left border on H4
+*/
+
+/* ════════════════════════════════════════════════════════
+   READING MODE  (.planning.markdown-preview-view)
+   ════════════════════════════════════════════════════════ */
+
+/* ── Month (H2): terracotta banner ─────────────────────── */
+.planning.markdown-preview-view h2 {
+  background-color: var(--ant-terracotta);
+  color:            var(--ant-cream);
+  /* font-family:      var(--font-interface-theme); */
+  font-size:        var(--font-ui-small);
+  font-weight:      var(--font-medium);
+  text-transform:   uppercase;
+  letter-spacing:   0.14em;
+  padding:          var(--size-2-1) var(--size-4-3);
+  margin-left:      calc(-1 * var(--file-margins));
+  margin-right:     calc(-1 * var(--file-margins));
+  margin-top:       var(--size-4-5);
+  margin-bottom:    var(--size-4-3);
+  line-height:      var(--line-height-tight);
+  border:           none;
+}
+
+.planning.markdown-preview-view h2:first-of-type {
+  margin-top: 0;
+}
+
+/* ── Week (H3): dashed underline label ─────────────────── */
+.planning.markdown-preview-view h3 {
+  /* font-family:    var(--font-interface-theme); */
+  font-size:        var(--font-ui-smaller);
+  font-weight:      var(--font-medium);
+  color:            var(--text-normal);
+  text-transform:   uppercase;
+  letter-spacing:   0.1em;
+  margin-top:       var(--size-4-4);
+  margin-bottom:    var(--size-2-3);
+  padding:          var(--size-2-1) var(--size-4-2);
+  background-color: var(--ant-linen);
+  border-bottom:    1px dashed var(--ant-border-mid);
+}
+
+/* ── Day (H4): terracotta left border + pip ─────────────── */
+.planning.markdown-preview-view h4 {
+  /* font-family:   var(--font-interface-theme); */
+  font-size:     var(--font-ui-small);
+  font-weight:   var(--font-normal);
+  color:         var(--text-muted);
+  margin-top:    var(--size-4-2);
+  margin-bottom: var(--size-2-1);
+  padding-left:  var(--size-4-2);
+  border-left:   2px solid var(--ant-terracotta);
+}
+
+/* ── Neutral bullets ────────────────────────────────────── */
+.theme-light .planning.markdown-preview-view .list-bullet::after,
+.theme-dark .planning.markdown-preview-view .list-bullet::after {
+  background-color: var(--text-faint) !important;
+}
+
+.theme-light .planning ul > li::marker,
+.theme-dark .planning ul > li::marker {
+  color: var(--text-faint) !important;
+}
+
+.markdown-reading-view:has(.planning) .list-bullet::after {
+  background-color: var(--text-faint) !important;
+}
+
+.theme-light .planning.markdown-source-view .HyperMD-list-line .list-bullet::after,
+.theme-dark .planning.markdown-source-view .HyperMD-list-line .list-bullet::after {
+  background-color: var(--text-faint) !important;
+}
+
+/* ── Body text under days ───────────────────────────────── */
+.planning.markdown-preview-view p {
+  /* font-size:     var(--font-smaller);
+  color:         var(--text-muted);
+  margin-top:    var(--size-2-1);
+  margin-bottom: var(--size-4-1);
+  padding-left:  var(--size-4-4); */
+}
+
+
+/* ════════════════════════════════════════════════════════
+   LIVE PREVIEW  (.planning.markdown-source-view.mod-cm6)
+   ════════════════════════════════════════════════════════ */
+
+/* ── Month (H2): terracotta banner ─────────────────────── */
+.planning.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-2) {
+  background-color: var(--ant-terracotta);
+  color:            var(--ant-cream);
+  font-size:        var(--font-ui-small);
+  font-weight:      var(--font-medium);
+  text-transform:   uppercase;
+  letter-spacing:   0.14em;
+  padding:          var(--size-2-1) var(--size-4-3);
+  margin-left:      calc(-1 * var(--file-margins));
+  margin-right:     calc(-1 * var(--file-margins));
+  line-height:      var(--line-height-tight);
+}
+
+/* hide the ## markers but keep them readable */
+.planning.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-2) .cm-formatting-header {
+  opacity: 0.35;
+  color:   var(--ant-cream);
+}
+
+/* ── Week (H3): dashed underline label ─────────────────── */
+.planning.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-3) {
+  font-size:        var(--font-ui-smaller);
+  font-weight:      var(--font-medium);
+  color:            var(--text-normal);
+  text-transform:   uppercase;
+  letter-spacing:   0.1em;
+  padding:          var(--size-2-1) var(--size-4-2);
+  background-color: var(--ant-linen);
+  border-bottom:    1px dashed var(--ant-border-mid);
+}
+
+/* ── Day (H4): terracotta left border ───────────────────── */
+.planning.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-4) {
+  font-size:    var(--font-ui-small);
+  font-weight:  var(--font-normal);
+  color:        var(--text-muted);
+  padding-top:  0;
+  padding-left: var(--size-4-2);
+  border-left:  2px solid var(--ant-terracotta);
+}

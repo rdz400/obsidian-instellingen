@@ -18,10 +18,12 @@ obsidian-bases/*
 # snippets
 !obsidian-config/snippets/
 !obsidian-config/snippets/tables.css
-!obsidian-config/snippets/navigation.css
 !obsidian-config/snippets/main.css
-!obsidian-config/snippets/linkjes.css
-!obsidian-config/snippets/kanban.css
+!obsidian-config/snippets/bases.css
+!obsidian-config/snippets/base-conditional.css
+!obsidian-config/snippets/callouts.css
+!obsidian-config/snippets/planning.css
+
 
 # plugin-settings
 ## sta plugins map toe
@@ -49,6 +51,8 @@ obsidian-config/plugins/templater-obsidian/*
 !obsidian-bases/dagelijkse-notities.base
 !obsidian-bases/recente-notities.base
 !obsidian-bases/embed-project-ref.base
+!obsidian-bases/dagroosters.base
+!obsidian-bases/diagrammen.base
 
 # overige
 .env

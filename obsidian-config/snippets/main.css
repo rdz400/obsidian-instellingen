@@ -97,6 +97,8 @@ body.is-mobile .bases-table-cell.bases-rendered-value {
 
   --contrast-color:           var(--highlight);
 
+  --ant-highlight:      var(--ant-surface-dark-1);
+
   --code-background:    var(--ant-surface-dark-1);
   --code-normal:        var(--ant-cream);
   --code-comment:       var(--ant-stone);

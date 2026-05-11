@@ -1,0 +1,113 @@
+filters:
+  and:
+    - type == "project"
+    - '!file.folder.startsWith("1-projecten/archief/")'
+formulas:
+  delta-herinnering: html("<span data-overdue='" + number((today() - herinnering).days > 0) + "'></span>")
+views:
+  - type: table
+    name: actief
+    filters:
+      or:
+        - vandaag == true
+        - later == true
+        - misschien != true
+    order:
+      - file.name
+      - vandaag
+      - week
+      - misschien
+      - klaar
+      - streefdatum
+      - herinnering
+      - eind
+      - formula.delta-herinnering
+    sort:
+      - property: vandaag
+        direction: DESC
+      - property: week
+        direction: DESC
+    columnSize:
+      file.name: 313
+  - type: table
+    name: later
+    filters:
+      or:
+        - misschien == true
+    order:
+      - file.name
+      - vandaag
+      - later
+      - misschien
+      - klaar
+      - streefdatum
+      - herinnering
+      - formula.delta-herinnering
+      - tags
+    sort:
+      - property: herinnering
+        direction: ASC
+      - property: klaar
+        direction: ASC
+      - property: vandaag
+        direction: DESC
+    columnSize:
+      file.name: 363
+      note.later: 75
+      formula.delta-herinnering: 144
+  - type: table
+    name: alles
+    order:
+      - file.name
+      - vandaag
+      - week
+      - misschien
+      - klaar
+      - streefdatum
+      - herinnering
+      - gebieden
+      - datum
+      - tags
+    sort:
+      - property: vandaag
+        direction: DESC
+      - property: week
+        direction: DESC
+      - property: misschien
+        direction: ASC
+      - property: herinnering
+        direction: ASC
+    columnSize:
+      file.name: 344
+      note.later: 96
+      note.streefdatum: 92
+      note.herinnering: 133
+      note.gebieden: 152
+  - type: table
+    name: nieuw
+    filters:
+      and:
+        - file.folder == "0-inbox"
+        - datum <= today()
+    order:
+      - file.name
+      - datum
+      - vandaag
+      - later
+      - misschien
+      - klaar
+      - streefdatum
+      - herinnering
+      - omschrijving
+      - eind
+      - gebieden
+      - tags
+      - formula.delta-herinnering
+    sort:
+      - property: datum
+        direction: DESC
+    columnSize:
+      file.name: 244
+      note.later: 44
+      note.streefdatum: 92
+      note.gebieden: 68

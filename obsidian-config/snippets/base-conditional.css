@@ -1,6 +1,5 @@
 .bases-tr:has(
   .bases-td .bases-table-cell [data-overdue="1"]
 ) {
-  background-color: yellow;
-
+  background-color: rgba(var(--interactive-accent-rgb), 0.15);
 }

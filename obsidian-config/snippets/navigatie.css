@@ -1,4 +1,0 @@
-/* Voeg een onderrand toe aan folders in de root */
-.nav-files-container > div > .nav-folder > .nav-folder-title {
-    border-bottom: solid 1px color-mix(in srgb, var(--contrast-color) 20%, transparent);
-}

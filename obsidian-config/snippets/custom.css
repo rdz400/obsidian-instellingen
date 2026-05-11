@@ -36,3 +36,8 @@
     --line-height-normal: 1.3;
     --font-text-size: 14px;
 }
+
+.groter {
+    --line-height-normal: 1.6;
+    --font-text-size: 18px;
+}

@@ -1,6 +1,6 @@
 {
   "format": "YYYYMMDD",
   "folder": "0-dagelijks",
-  "template": "9-sjablonen/tpl-dagelijkse-notitie",
+  "template": "9-sjablonen/tpl-dagelijkse-notitie.md",
   "autorun": false
 }

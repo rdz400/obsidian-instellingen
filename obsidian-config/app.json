@@ -47,5 +47,7 @@
   "showInlineTitle": false,
   "focusNewTab": false,
   "mobileQuickRibbonItem": "",
-  "mobilePullAction": "daily-notes"
+  "mobilePullAction": "daily-notes",
+  "tabSize": 4,
+  "openBehavior": ""
 }

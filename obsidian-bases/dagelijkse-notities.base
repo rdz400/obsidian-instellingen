@@ -18,6 +18,7 @@ views:
       - file.backlinks
       - gewicht
       - koffiebonen
+      - links
     sort:
       - property: file.name
         direction: DESC

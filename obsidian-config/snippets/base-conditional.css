@@ -3,3 +3,27 @@
 ) {
   background-color: rgba(var(--interactive-accent-rgb), 0.15);
 }
+
+
+.bases-td[data-property="note.vandaag"] input:checked {
+  background-color: red;
+}
+
+
+.bases-tr:has(
+
+  .bases-td[data-property="note.vandaag"] input:checked
+
+) {
+  background-color: var(--ant-highlight);
+
+}
+
+.bases-tr:has(
+
+  .bases-td[data-property="note.vandaag"] input:checked
+
+) {
+  background-color: var(--ant-highlight);
+
+}

@@ -1,0 +1,23 @@
+/* Task "y" */
+input[data-task="y"].task-list-item-checkbox,
+li[data-task="y"] .task-list-item-checkbox {
+  --checkbox-color: var(--color-green);
+  --checkbox-color-hover: var(--color-green);
+  --checkbox-border-color: var(--color-green);
+  --checkbox-border-color-hover: var(--color-green);
+}
+
+/* Task "o" */
+input[data-task="o"].task-list-item-checkbox,
+li[data-task="o"] .task-list-item-checkbox {
+  --checkbox-color: var(--color-orange);
+  --checkbox-color-hover: var(--color-orange);
+  --checkbox-border-color: var(--color-orange);
+  --checkbox-border-color-hover: var(--color-orange);
+}
+
+input[data-task="o"].task-list-item-checkbox::after,
+li[data-task="o"] .task-list-item-checkbox::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3C/svg%3E");
+}

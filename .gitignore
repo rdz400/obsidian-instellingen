@@ -53,7 +53,7 @@ obsidian-config/plugins/templater-obsidian/*
 !obsidian-bases/embed-project-ref.base
 !obsidian-bases/dagroosters.base
 !obsidian-bases/diagrammen.base
-!obsidian-bases/projecten-experiment.base
+!obsidian-bases/projecten.base
 
 # overige
 .env

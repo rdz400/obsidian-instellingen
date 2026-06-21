@@ -4,6 +4,7 @@ filters:
     - '!file.folder.startsWith("1-projecten/archief/")'
 formulas:
   delta-herinnering: html("<span data-overdue='" + number((today() - herinnering).days > 0) + "'></span>")
+  zoek-verwijzingen: link("obsidian://search?vault=MainVault&query=%22%5B%5B" + file.name + "%22", "zoek")
 views:
   - type: table
     name: actief
@@ -22,6 +23,8 @@ views:
       - herinnering
       - eind
       - formula.delta-herinnering
+      - omschrijving
+      - formula.zoek-verwijzingen
     sort:
       - property: vandaag
         direction: DESC
@@ -37,13 +40,14 @@ views:
     order:
       - file.name
       - vandaag
-      - later
       - misschien
       - klaar
       - streefdatum
       - herinnering
       - formula.delta-herinnering
       - tags
+      - links
+      - gebieden
     sort:
       - property: herinnering
         direction: ASC
@@ -68,6 +72,7 @@ views:
       - gebieden
       - datum
       - tags
+      - formula.zoek-verwijzingen
     sort:
       - property: vandaag
         direction: DESC
@@ -93,7 +98,6 @@ views:
       - file.name
       - datum
       - vandaag
-      - later
       - misschien
       - klaar
       - streefdatum
@@ -108,6 +112,43 @@ views:
         direction: DESC
     columnSize:
       file.name: 244
-      note.later: 44
+      note.later: 57
       note.streefdatum: 92
       note.gebieden: 68
+      formula.delta-herinnering: 144
+  - type: cards
+    name: actief 2
+    filters:
+      or:
+        - vandaag == true
+        - later == true
+        - misschien != true
+    order:
+      - file.name
+      - tags
+    sort:
+      - property: vandaag
+        direction: DESC
+      - property: week
+        direction: DESC
+    columnSize:
+      file.name: 313
+    cardSize: 450
+    imageAspectRatio: 0.9
+  - type: table
+    name: actief 3
+    filters:
+      or:
+        - vandaag == true
+        - later == true
+        - misschien != true
+    order:
+      - file.name
+    sort:
+      - property: vandaag
+        direction: DESC
+      - property: week
+        direction: DESC
+    columnSize:
+      file.name: 313
+    rowHeight: medium

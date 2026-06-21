@@ -2,7 +2,7 @@
   "accentColor": "#d97757",
   "textFontFamily": "",
   "translucency": true,
-  "baseFontSize": 14,
+  "baseFontSize": 16,
   "cssTheme": "",
   "enabledCssSnippets": [
     "kanban",
@@ -14,9 +14,10 @@
     "custom",
     "main",
     "planning",
-    "base-conditional"
+    "base-conditional",
+    "taken"
   ],
-  "baseFontSizeAction": false,
+  "baseFontSizeAction": true,
   "theme": "system",
   "interfaceFontFamily": "",
   "monospaceFontFamily": "",

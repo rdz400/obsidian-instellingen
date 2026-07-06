@@ -283,22 +283,6 @@
       "key": "D"
     }
   ],
-  "obsidian-kanban:toggle-kanban-view": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "R"
-    }
-  ],
-  "obsidian-kanban:add-kanban-lane": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "T"
-    }
-  ],
   "file-explorer:new-file-in-new-pane": [],
   "editor:open-link-in-new-window": [
     {
@@ -378,6 +362,55 @@
         "Shift"
       ],
       "key": "D"
+    }
+  ],
+  "list-to-table:toggle-checkbox-advanced": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
+    }
+  ],
+  "plugin-van-ronald:toggle-nu-tag": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "P"
+    }
+  ],
+  "editor:focus": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "F"
+    }
+  ],
+  "plugin-van-ronald:toggle-checkbox-advanced": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "R"
+    }
+  ],
+  "plugin-van-ronald:insert-tag": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "T"
+    }
+  ],
+  "workspace:close-tab-group": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "W"
     }
   ]
 }

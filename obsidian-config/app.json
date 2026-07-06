@@ -12,10 +12,10 @@
   ],
   "mobileToolbarCommands": [
     "insert-current-time",
+    "editor:insert-tag",
     "editor:insert-wikilink",
     "editor:cycle-list-checklist",
     "editor:toggle-bullet-list",
-    "editor:set-heading",
     "editor:indent-list",
     "editor:unindent-list",
     "editor:swap-line-up",
@@ -28,7 +28,8 @@
     "editor:toggle-bold",
     "editor:insert-horizontal-rule",
     "editor:fold-all",
-    "editor:unfold-all"
+    "editor:unfold-all",
+    "editor:cut"
   ],
   "vimMode": true,
   "useTab": false,
@@ -47,7 +48,7 @@
   "showInlineTitle": false,
   "focusNewTab": false,
   "mobileQuickRibbonItem": "",
-  "mobilePullAction": "daily-notes",
+  "mobilePullAction": "command-palette:open",
   "tabSize": 4,
   "openBehavior": ""
 }

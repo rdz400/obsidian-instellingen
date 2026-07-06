@@ -1,0 +1,83 @@
+/* Context tags (GTD-style)
+   Pill-shaped, uppercase, warm linen surface — reads as metadata, not a button.
+   Each context gets a distinct accent from the Anthropic palette. */
+
+/* ---- Shared pill treatment ---- */
+
+/* Reading mode: single <a> element carries the whole pill (incl. "#"). */
+a.tag[href="#buiten"],
+a.tag[href="#computer"],
+a.tag[href="#focus"] {
+  font-size: var(--font-smallest);
+  font-weight: 500;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.06em;
+  padding: 0.05em 0.5em;
+  border-radius: var(--radius-l);
+  border: var(--border-width) solid var(--ant-border);
+  background-color: var(--tag-surface);
+  color: var(--tag-color);
+  text-decoration: none;
+}
+
+/* Live preview: the tag is split across two adjacent spans — the "#"
+   (hashtag-begin) and the name (hashtag-end). Style both and join them into
+   one continuous pill by rounding/bordering only their outer edges. Keeping
+   the "#" visible preserves cursor placement so the editor stays intact. */
+.cm-hashtag.cm-tag-buiten,
+.cm-hashtag.cm-tag-computer,
+.cm-hashtag.cm-tag-focus {
+  font-size: var(--font-smallest);
+  font-weight: 500;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.06em;
+  padding: 0.05em 0;
+  border-top: var(--border-width) solid var(--ant-border);
+  border-bottom: var(--border-width) solid var(--ant-border);
+  background-color: var(--tag-surface);
+  color: var(--tag-color);
+  text-decoration: none;
+}
+
+/* Left cap: the "#" */
+.cm-hashtag-begin.cm-tag-buiten,
+.cm-hashtag-begin.cm-tag-computer,
+.cm-hashtag-begin.cm-tag-focus {
+  padding-left: 0.5em;
+  border-left: var(--border-width) solid var(--ant-border);
+  border-top-left-radius: var(--radius-l);
+  border-bottom-left-radius: var(--radius-l);
+}
+
+/* Right cap: the name */
+.cm-hashtag-end.cm-tag-buiten,
+.cm-hashtag-end.cm-tag-computer,
+.cm-hashtag-end.cm-tag-focus {
+  padding-right: 0.5em;
+  border-right: var(--border-width) solid var(--ant-border);
+  border-top-right-radius: var(--radius-l);
+  border-bottom-right-radius: var(--radius-l);
+}
+
+/* ---- Per-context colors ---- */
+
+/* buiten — sage green (outdoors) */
+a.tag[href="#buiten"],
+.cm-hashtag.cm-tag-buiten {
+  --tag-color: var(--ant-sage);
+  --tag-surface: rgba(120, 140, 93, 0.12);
+}
+
+/* computer — dusty blue (screen work) */
+a.tag[href="#computer"],
+.cm-hashtag.cm-tag-computer {
+  --tag-color: var(--ant-blue);
+  --tag-surface: rgba(106, 155, 204, 0.12);
+}
+
+/* focus — terracotta (deep work) */
+a.tag[href="#focus"],
+.cm-hashtag.cm-tag-focus {
+  --tag-color: var(--ant-terracotta);
+  --tag-surface: rgba(217, 119, 87, 0.12);
+}

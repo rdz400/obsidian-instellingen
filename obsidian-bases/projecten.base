@@ -1,154 +1,117 @@
 filters:
   and:
     - type == "project"
-    - '!file.folder.startsWith("1-projecten/archief/")'
 formulas:
-  delta-herinnering: html("<span data-overdue='" + number((today() - herinnering).days > 0) + "'></span>")
-  zoek-verwijzingen: link("obsidian://search?vault=MainVault&query=%22%5B%5B" + file.name + "%22", "zoek")
+  taken_backlinks: file.backlinks.filter(value.asFile().inFolder("1-taken"))
 views:
   - type: table
     name: actief
     filters:
-      or:
-        - vandaag == true
-        - later == true
-        - misschien != true
+      and:
+        - status == "actief"
     order:
       - file.name
+      - status
+      - formula.taken_backlinks
       - vandaag
-      - week
-      - misschien
-      - klaar
-      - streefdatum
-      - herinnering
       - eind
-      - formula.delta-herinnering
-      - omschrijving
-      - formula.zoek-verwijzingen
-    sort:
-      - property: vandaag
-        direction: DESC
-      - property: week
-        direction: DESC
-    columnSize:
-      file.name: 313
-  - type: table
-    name: later
-    filters:
-      or:
-        - misschien == true
-    order:
-      - file.name
-      - vandaag
-      - misschien
-      - klaar
-      - streefdatum
-      - herinnering
-      - formula.delta-herinnering
-      - tags
-      - links
-      - gebieden
-    sort:
-      - property: herinnering
-        direction: ASC
-      - property: klaar
-        direction: ASC
-      - property: vandaag
-        direction: DESC
-    columnSize:
-      file.name: 363
-      note.later: 75
-      formula.delta-herinnering: 144
-  - type: table
-    name: alles
-    order:
-      - file.name
-      - vandaag
-      - week
-      - misschien
-      - klaar
-      - streefdatum
-      - herinnering
-      - gebieden
       - datum
-      - tags
-      - formula.zoek-verwijzingen
     sort:
       - property: vandaag
         direction: DESC
-      - property: week
-        direction: DESC
-      - property: misschien
-        direction: ASC
+    columnSize:
+      file.name: 422
+      note.status: 110
+      formula.taken_backlinks: 243
+      note.vandaag: 84
+  - type: table
+    name: misschien
+    filters:
+      and:
+        - status == "misschien"
+    order:
+      - file.name
+      - status
+      - datum
+      - herinnering
+      - formula.taken_backlinks
+    sort:
       - property: herinnering
         direction: ASC
     columnSize:
       file.name: 344
-      note.later: 96
-      note.streefdatum: 92
-      note.herinnering: 133
-      note.gebieden: 152
+      note.status: 89
+      note.omschrijving: 603
+      formula.taken_backlinks: 243
   - type: table
-    name: nieuw
+    name: leeg
     filters:
       and:
-        - file.folder == "0-inbox"
-        - datum <= today()
+        - status.isEmpty()
     order:
       - file.name
+      - status
       - datum
-      - vandaag
-      - misschien
-      - klaar
-      - streefdatum
-      - herinnering
       - omschrijving
-      - eind
-      - gebieden
-      - tags
-      - formula.delta-herinnering
-    sort:
-      - property: datum
-        direction: DESC
     columnSize:
-      file.name: 244
-      note.later: 57
-      note.streefdatum: 92
-      note.gebieden: 68
-      formula.delta-herinnering: 144
-  - type: cards
-    name: actief 2
-    filters:
-      or:
-        - vandaag == true
-        - later == true
-        - misschien != true
-    order:
-      - file.name
-      - tags
-    sort:
-      - property: vandaag
-        direction: DESC
-      - property: week
-        direction: DESC
-    columnSize:
-      file.name: 313
-    cardSize: 450
-    imageAspectRatio: 0.9
+      file.name: 344
   - type: table
-    name: actief 3
-    filters:
-      or:
-        - vandaag == true
-        - later == true
-        - misschien != true
+    name: alles
     order:
       - file.name
+      - status
+      - eind
     sort:
-      - property: vandaag
-        direction: DESC
-      - property: week
-        direction: DESC
+      - property: status
+        direction: ASC
+  - type: table
+    name: backlog
+    filters:
+      and:
+        - status == "backlog"
+    order:
+      - file.name
+      - status
+      - formula.taken_backlinks
     columnSize:
-      file.name: 313
-    rowHeight: medium
+      file.name: 344
+      note.status: 110
+  - type: table
+    name: klaar
+    filters:
+      and:
+        - status == "klaar"
+    order:
+      - file.name
+      - status
+      - eind
+      - file.folder
+    columnSize:
+      file.name: 344
+      note.status: 110
+  - type: table
+    name: geannuleerd
+    filters:
+      and:
+        - status == "geannuleerd"
+    order:
+      - file.name
+      - status
+      - eind
+      - file.folder
+    columnSize:
+      file.name: 344
+      note.status: 110
+  - type: table
+    name: wachten
+    filters:
+      and:
+        - status == "wachten"
+    order:
+      - file.name
+      - status
+      - eind
+      - file.folder
+    columnSize:
+      file.name: 344
+      note.status: 110

@@ -27,9 +27,8 @@
     "editor:add-cursor-below",
     "editor:toggle-bold",
     "editor:insert-horizontal-rule",
-    "editor:fold-all",
-    "editor:unfold-all",
-    "editor:cut"
+    "plugin-van-ronald:toggle-nu-tag",
+    "plugin-van-ronald:insert-tag"
   ],
   "vimMode": true,
   "useTab": false,

@@ -412,5 +412,41 @@
       ],
       "key": "W"
     }
+  ],
+  "plugin-van-ronald:open-klaar": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "K"
+    }
+  ],
+  "plugin-van-ronald:open-projecten": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "plugin-van-ronald:open-inbox": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "I"
+    }
+  ],
+  "plugin-van-ronald:open-most-recent-taak-note": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "O"
+    }
   ]
 }

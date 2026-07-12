@@ -1,3 +1,9 @@
+/* Remove strikethrough from completed tasks */
+.markdown-reading-view li.task-list-item.is-checked,
+.markdown-source-view .HyperMD-task-line[data-task]:not([data-task=" "]) {
+  text-decoration: none;
+}
+
 /* Task "y" */
 input[data-task="y"].task-list-item-checkbox,
 li[data-task="y"] .task-list-item-checkbox {

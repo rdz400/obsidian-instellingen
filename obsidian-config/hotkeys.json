@@ -448,5 +448,29 @@
       ],
       "key": "O"
     }
+  ],
+  "plugin-van-ronald:toggle-vandaag-tag": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "E"
+    }
+  ],
+  "plugin-van-ronald:search-tasks": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "S"
+    }
+  ],
+  "plugin-van-ronald:search-projects": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "K"
+    }
   ]
 }

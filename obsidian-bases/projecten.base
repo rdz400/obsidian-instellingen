@@ -8,7 +8,10 @@ views:
     name: actief
     filters:
       and:
-        - status == "actief"
+        - status.containsAny("actief", "backlog")
+    groupBy:
+      property: status
+      direction: ASC
     order:
       - file.name
       - status

@@ -7,7 +7,12 @@
 /* Reading mode: single <a> element carries the whole pill (incl. "#"). */
 a.tag[href="#buiten"],
 a.tag[href="#computer"],
-a.tag[href="#focus"] {
+a.tag[href="#thuis"],
+a.tag[href="#focus"],
+a.tag[href="#nu"],
+a.tag[href="#vandaag"],
+a.tag[href="#misschien"],
+a.tag[href="#project"] {
   font-size: var(--font-smallest);
   font-weight: 500;
   font-variant-caps: small-caps;
@@ -26,7 +31,12 @@ a.tag[href="#focus"] {
    the "#" visible preserves cursor placement so the editor stays intact. */
 .cm-hashtag.cm-tag-buiten,
 .cm-hashtag.cm-tag-computer,
-.cm-hashtag.cm-tag-focus {
+.cm-hashtag.cm-tag-thuis,
+.cm-hashtag.cm-tag-focus,
+.cm-hashtag.cm-tag-nu,
+.cm-hashtag.cm-tag-vandaag,
+.cm-hashtag.cm-tag-misschien,
+.cm-hashtag.cm-tag-project {
   font-size: var(--font-smallest);
   font-weight: 500;
   font-variant-caps: small-caps;
@@ -42,7 +52,12 @@ a.tag[href="#focus"] {
 /* Left cap: the "#" */
 .cm-hashtag-begin.cm-tag-buiten,
 .cm-hashtag-begin.cm-tag-computer,
-.cm-hashtag-begin.cm-tag-focus {
+.cm-hashtag-begin.cm-tag-thuis,
+.cm-hashtag-begin.cm-tag-focus,
+.cm-hashtag-begin.cm-tag-nu,
+.cm-hashtag-begin.cm-tag-vandaag,
+.cm-hashtag-begin.cm-tag-misschien,
+.cm-hashtag-begin.cm-tag-project {
   padding-left: 0.5em;
   border-left: var(--border-width) solid var(--ant-border);
   border-top-left-radius: var(--radius-l);
@@ -52,7 +67,12 @@ a.tag[href="#focus"] {
 /* Right cap: the name */
 .cm-hashtag-end.cm-tag-buiten,
 .cm-hashtag-end.cm-tag-computer,
-.cm-hashtag-end.cm-tag-focus {
+.cm-hashtag-end.cm-tag-thuis,
+.cm-hashtag-end.cm-tag-focus,
+.cm-hashtag-end.cm-tag-nu,
+.cm-hashtag-end.cm-tag-vandaag,
+.cm-hashtag-end.cm-tag-misschien,
+.cm-hashtag-end.cm-tag-project {
   padding-right: 0.5em;
   border-right: var(--border-width) solid var(--ant-border);
   border-top-right-radius: var(--radius-l);
@@ -61,18 +81,15 @@ a.tag[href="#focus"] {
 
 /* ---- Per-context colors ---- */
 
-/* buiten — sage green (outdoors) */
+/* buiten / computer / thuis — sage green (location/setting contexts) */
 a.tag[href="#buiten"],
-.cm-hashtag.cm-tag-buiten {
+a.tag[href="#computer"],
+a.tag[href="#thuis"],
+.cm-hashtag.cm-tag-buiten,
+.cm-hashtag.cm-tag-computer,
+.cm-hashtag.cm-tag-thuis {
   --tag-color: var(--ant-sage);
   --tag-surface: rgba(120, 140, 93, 0.12);
-}
-
-/* computer — dusty blue (screen work) */
-a.tag[href="#computer"],
-.cm-hashtag.cm-tag-computer {
-  --tag-color: var(--ant-blue);
-  --tag-surface: rgba(106, 155, 204, 0.12);
 }
 
 /* focus — terracotta (deep work) */
@@ -80,4 +97,32 @@ a.tag[href="#focus"],
 .cm-hashtag.cm-tag-focus {
   --tag-color: var(--ant-terracotta);
   --tag-surface: rgba(217, 119, 87, 0.12);
+}
+
+/* nu — dusty blue (immediate/now) */
+a.tag[href="#nu"],
+.cm-hashtag.cm-tag-nu {
+  --tag-color: var(--ant-blue);
+  --tag-surface: rgba(106, 155, 204, 0.12);
+}
+
+/* vandaag — stone grey (today) */
+a.tag[href="#vandaag"],
+.cm-hashtag.cm-tag-vandaag {
+  --tag-color: var(--ant-stone);
+  --tag-surface: rgba(136, 135, 128, 0.12);
+}
+
+/* misschien — greige (maybe/someday) */
+a.tag[href="#misschien"],
+.cm-hashtag.cm-tag-misschien {
+  --tag-color: var(--ant-greige);
+  --tag-surface: rgba(176, 174, 165, 0.12);
+}
+
+/* project — muted purple (multi-step outcomes) */
+a.tag[href="#project"],
+.cm-hashtag.cm-tag-project {
+  --tag-color: var(--color-purple);
+  --tag-surface: rgba(var(--color-purple-rgb), 0.12);
 }

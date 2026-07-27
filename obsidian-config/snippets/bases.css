@@ -1,5 +1,4 @@
 body.theme-light {
-  /* --bases-card-bg: var(--background-primary); */
   --bases-card-bg: color-mix(in srgb, var(--background-primary) 93%, var(--ant-greige) 7%);
 }
 

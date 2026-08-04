@@ -389,14 +389,6 @@
       "key": "F"
     }
   ],
-  "plugin-van-ronald:toggle-checkbox-advanced": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "R"
-    }
-  ],
   "plugin-van-ronald:insert-tag": [
     {
       "modifiers": [
@@ -471,6 +463,15 @@
         "Ctrl"
       ],
       "key": "K"
+    }
+  ],
+  "plugin-van-ronald:search-backlinks": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "I"
     }
   ]
 }

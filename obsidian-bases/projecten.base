@@ -19,6 +19,7 @@ views:
       - vandaag
       - eind
       - datum
+      - herinnering
     sort:
       - property: vandaag
         direction: DESC

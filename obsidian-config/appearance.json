@@ -17,7 +17,8 @@
     "base-conditional",
     "taken",
     "context-tags",
-    "mobiel"
+    "mobiel",
+    "mermaid"
   ],
   "baseFontSizeAction": true,
   "theme": "system",

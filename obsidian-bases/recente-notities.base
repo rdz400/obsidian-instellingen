@@ -6,7 +6,7 @@ views:
     name: Table
     filters:
       and:
-        - datum >= (today() - duration('28d'))
+        - datum >= (today() - duration('64d'))
     order:
       - file.name
       - file.folder

@@ -1,0 +1,138 @@
+/* Mermaid gantt chart styling
+   Mermaid injects an id-scoped <style> block inside each rendered SVG
+   (e.g. #mermaid-1234 .taskText), so these rules need !important to win. */
+
+/* Grid lines */
+/* Soft grey that follows the theme: --mono-rgb-100 is black in light mode and
+   white in dark mode, so one low-alpha value reads as muted in both. Alpha
+   carries the softness here — no separate opacity to multiply against. */
+.markdown-rendered .mermaid .grid .tick line {
+  stroke: rgba(var(--mono-rgb-100), 0.15) !important;
+  shape-rendering: crispEdges;
+}
+
+.markdown-rendered .mermaid .grid .tick text {
+  fill: var(--text-muted) !important;
+}
+
+.markdown-rendered .mermaid .grid path {
+  stroke-width: 0 !important;
+}
+
+/* Axis and title text */
+.markdown-rendered .mermaid .titleText {
+  fill: var(--text-normal) !important;
+}
+
+.markdown-rendered .mermaid .sectionTitle,
+.markdown-rendered .mermaid .sectionTitle0,
+.markdown-rendered .mermaid .sectionTitle1,
+.markdown-rendered .mermaid .sectionTitle2,
+.markdown-rendered .mermaid .sectionTitle3 {
+  fill: var(--text-normal) !important;
+  font-weight: var(--font-semibold) !important;
+}
+
+/* Task label text. Mermaid emits numbered variants (taskText1,
+   taskTextOutside0/2/3...) alongside the base classes, so both are covered. */
+.markdown-rendered .mermaid .taskText,
+.markdown-rendered .mermaid .taskText0,
+.markdown-rendered .mermaid .taskText1,
+.markdown-rendered .mermaid .taskText2,
+.markdown-rendered .mermaid .taskText3 {
+  fill: var(--text-normal) !important;
+  text-anchor: middle;
+}
+
+.markdown-rendered .mermaid .taskTextOutside0,
+.markdown-rendered .mermaid .taskTextOutside1,
+.markdown-rendered .mermaid .taskTextOutside2,
+.markdown-rendered .mermaid .taskTextOutside3,
+.markdown-rendered .mermaid .taskTextOutsideRight,
+.markdown-rendered .mermaid .taskTextOutsideLeft {
+  fill: var(--text-normal) !important;
+}
+
+.markdown-rendered .mermaid .taskTextOutsideRight {
+  text-anchor: start;
+}
+
+.markdown-rendered .mermaid .taskTextOutsideLeft {
+  text-anchor: end;
+}
+
+/* Milestones */
+.markdown-rendered .mermaid .milestone {
+  fill: rgba(var(--color-purple-rgb), 0.45) !important;
+  stroke: rgba(var(--color-purple-rgb), 0.6) !important;
+}
+
+.markdown-rendered .mermaid .milestoneText {
+  fill: var(--text-normal) !important;
+}
+
+/* Swim lane backgrounds — alternating two-tone.
+   Mermaid cycles section0-3 by section, emitting one rect per task row, so
+   even/odd indices give clean alternating bands. The tones stay muted; the
+   gap between them is what makes adjacent lanes readable. */
+.markdown-rendered .mermaid .section0,
+.markdown-rendered .mermaid .section2 {
+  fill: rgba(var(--mono-rgb-100), 0.05) !important;
+}
+
+.markdown-rendered .mermaid .section1,
+.markdown-rendered .mermaid .section3 {
+  fill: rgba(var(--mono-rgb-100), 0.25) !important;
+}
+
+/* One rect is drawn per task row, so a stroke would outline every row instead
+   of the lane. The alternating fill carries the separation on its own. */
+.markdown-rendered .mermaid rect.section {
+  stroke: none !important;
+}
+
+.markdown-rendered .mermaid .task0,
+.markdown-rendered .mermaid .task1,
+.markdown-rendered .mermaid .task2,
+.markdown-rendered .mermaid .task3 {
+  fill: rgba(var(--color-blue-rgb), 0.35) !important;
+  stroke: rgba(var(--color-blue-rgb), 0.5) !important;
+}
+
+.markdown-rendered .mermaid .active0,
+.markdown-rendered .mermaid .active1,
+.markdown-rendered .mermaid .active2,
+.markdown-rendered .mermaid .active3 {
+  fill: rgba(var(--color-cyan-rgb), 0.35) !important;
+  stroke: rgba(var(--color-cyan-rgb), 0.5) !important;
+}
+
+.markdown-rendered .mermaid .done0,
+.markdown-rendered .mermaid .done1,
+.markdown-rendered .mermaid .done2,
+.markdown-rendered .mermaid .done3 {
+  fill: rgba(var(--mono-rgb-100), 0.12) !important;
+  stroke: rgba(var(--mono-rgb-100), 0.2) !important;
+}
+
+.markdown-rendered .mermaid .crit0,
+.markdown-rendered .mermaid .crit1,
+.markdown-rendered .mermaid .crit2,
+.markdown-rendered .mermaid .crit3 {
+  fill: rgba(var(--color-orange-rgb), 0.35) !important;
+  stroke: rgba(var(--color-orange-rgb), 0.55) !important;
+}
+
+/* Excluded days (`excludes weekends`). Mermaid fills these with a hardcoded
+   #eeeeee, which is near-invisible in light mode and wrong in dark mode.
+   These rects span the full chart height, so they composite over the lane
+   fills above — keep the alpha low or the striping looks blotchy. */
+.markdown-rendered .mermaid .exclude-range {
+  fill: rgba(var(--mono-rgb-100), 0.05) !important;
+}
+
+/* Today marker */
+.markdown-rendered .mermaid .today {
+  stroke: rgba(var(--color-red-rgb), 0.6) !important;
+  stroke-width: 2px !important;
+}

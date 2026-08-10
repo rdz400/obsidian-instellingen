@@ -65,6 +65,7 @@ views:
       - file.name
       - status
       - eind
+      - tags
     sort:
       - property: status
         direction: ASC

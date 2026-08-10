@@ -113,15 +113,6 @@
     }
   ],
   "workspace:undo-close-pane": [],
-  "workspace:move-to-new-window": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "ArrowUp"
-    }
-  ],
   "editor:toggle-source": [
     {
       "modifiers": [
@@ -472,6 +463,40 @@
         "Mod"
       ],
       "key": "I"
+    }
+  ],
+  "plugin-van-ronald:search-outgoing-links": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
+  "plugin-van-ronald:extend-selection-line-up": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "plugin-van-ronald:extend-selection-line-down": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "plugin-van-ronald:select-line": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "'"
     }
   ]
 }

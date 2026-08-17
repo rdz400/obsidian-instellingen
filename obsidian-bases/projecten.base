@@ -3,6 +3,10 @@ filters:
     - type == "project"
 formulas:
   taken_backlinks: file.backlinks.filter(value.asFile().inFolder("1-taken"))
+  Untitled: link("obsidian://ronald-tasks?query=" + file.name, "taken")
+properties:
+  formula.Untitled:
+    displayName: taak-modal
 views:
   - type: table
     name: actief
@@ -16,17 +20,22 @@ views:
       - file.name
       - status
       - formula.taken_backlinks
+      - formula.Untitled
       - vandaag
       - eind
       - datum
       - herinnering
+      - streefdatum
     sort:
+      - property: formula.Untitled
+        direction: DESC
       - property: vandaag
         direction: DESC
     columnSize:
       file.name: 422
       note.status: 110
       formula.taken_backlinks: 243
+      formula.Untitled: 100
       note.vandaag: 84
   - type: table
     name: misschien
@@ -66,6 +75,8 @@ views:
       - status
       - eind
       - tags
+      - formula.Untitled
+      - formula.taken_backlinks
     sort:
       - property: status
         direction: ASC
@@ -91,6 +102,9 @@ views:
       - status
       - eind
       - file.folder
+    sort:
+      - property: eind
+        direction: DESC
     columnSize:
       file.name: 344
       note.status: 110

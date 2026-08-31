@@ -498,5 +498,89 @@
       ],
       "key": "'"
     }
+  ],
+  "editor:table-row-after": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
+      "key": "K"
+    }
+  ],
+  "editor:table-row-before": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
+      "key": "J"
+    }
+  ],
+  "editor:table-col-before": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:table-col-delete": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "Backspace"
+    }
+  ],
+  "editor:table-row-delete": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Backspace"
+    }
+  ],
+  "editor:table-col-left": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "editor:table-col-right": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "editor:table-col-after": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "L"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-end": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "K"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-top": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "J"
+    }
   ]
 }

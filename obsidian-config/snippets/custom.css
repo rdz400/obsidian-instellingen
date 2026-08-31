@@ -6,15 +6,15 @@
 
 .breed {
     --file-line-width: 900px;
-    --table-text-size: 0.9rem;
+    --table-text-size: 0.8rem;
 }
 
 .theme-light .breed {
-  --table-row-alt-background: #fcfcfc;
+  /* --table-row-alt-background: #fcfcfc; */
 }
 
 .theme-dark .breed {
-  --table-row-alt-background: #272626; /* or another dark shade */
+  /* --table-row-alt-background: #272626; */
 }
 
 

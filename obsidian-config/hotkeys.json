@@ -227,14 +227,6 @@
       "key": "R"
     }
   ],
-  "workspace:split-vertical": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "R"
-    }
-  ],
   "open-with-default-app:open": [
     {
       "modifiers": [
@@ -581,6 +573,22 @@
         "Alt"
       ],
       "key": "J"
+    }
+  ],
+  "plugin-van-ronald:open-taken": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "O"
+    }
+  ],
+  "plugin-van-ronald:toggle-checkbox-advanced": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "R"
     }
   ]
 }

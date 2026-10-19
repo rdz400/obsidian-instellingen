@@ -41,15 +41,6 @@
       "key": "Tab"
     }
   ],
-  "editor:toggle-strikethrough": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "S"
-    }
-  ],
   "editor:fold-less": [
     {
       "modifiers": [
@@ -101,6 +92,12 @@
         "Shift"
       ],
       "key": "L"
+    },
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "R"
     }
   ],
   "workspace:open-in-new-window": [
@@ -424,14 +421,6 @@
       "key": "O"
     }
   ],
-  "plugin-van-ronald:toggle-vandaag-tag": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "E"
-    }
-  ],
   "plugin-van-ronald:search-tasks": [
     {
       "modifiers": [
@@ -559,22 +548,6 @@
       "key": "L"
     }
   ],
-  "plugin-van-ronald:move-lines-to-end": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "K"
-    }
-  ],
-  "plugin-van-ronald:move-lines-to-top": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "J"
-    }
-  ],
   "plugin-van-ronald:open-taken": [
     {
       "modifiers": [
@@ -583,12 +556,125 @@
       "key": "O"
     }
   ],
-  "plugin-van-ronald:toggle-checkbox-advanced": [
+  "workspace:split-vertical": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ],
+  "plugin-van-ronald:open-most-recent-tijdsregistratie-note": [
     {
       "modifiers": [
         "Ctrl"
       ],
+      "key": "I"
+    }
+  ],
+  "plugin-van-ronald:show-outline": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
+      "key": "U"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ],
+  "plugin-van-ronald:toggle-vandaag-tag": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "D"
+    }
+  ],
+  "plugin-van-ronald:toggle-week-tag": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "E"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-top": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "K"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-end": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "J"
+    }
+  ],
+  "plugin-van-ronald:add-time-record": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
       "key": "R"
+    }
+  ],
+  "plugin-van-ronald:copy-wikilink-to-this-note": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "."
+    }
+  ],
+  "editor:insert-wikilink": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "editor:toggle-checklist-status": [],
+  "plugin-van-ronald:open-tijdsregistratie-note": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "I"
+    }
+  ],
+  "plugin-van-ronald:show-recent-notes": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "R"
+    }
+  ],
+  "plugin-van-ronald:switch-to-open-tab": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "plugin-van-ronald:cycle-through-notes": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
     }
   ]
 }

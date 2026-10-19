@@ -1,0 +1,14 @@
+:is(.bases-view[data-view-type="kanban"], .drag-reorder-ghost) .bases-kanban-card-property.mod-title .bases-kanban-card-line {
+  /* height: auto; */
+  /* white-space: normal; */
+  /* overflow-wrap: anywhere; */
+  /* text-overflow: clip; */
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-normal);
+  line-height: var(--line-height-tight);
+}
+/* Hide property labels on kanban cards. Also applies to Obsidian's hidden
+   measuring card, so the card heights it calculates stay correct. */
+.bases-view[data-view-type="kanban"] .bases-kanban-card-label {
+  display: none;
+}

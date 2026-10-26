@@ -575,13 +575,6 @@
   "plugin-van-ronald:show-outline": [
     {
       "modifiers": [
-        "Alt",
-        "Ctrl"
-      ],
-      "key": "U"
-    },
-    {
-      "modifiers": [
         "Alt"
       ],
       "key": "1"
@@ -675,6 +668,71 @@
         "Alt"
       ],
       "key": "C"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-overview": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "O"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-someday": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "M"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-today": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "D"
+    }
+  ],
+  "plugin-van-ronald:move-lines-to-inbox": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "P"
+    }
+  ],
+  "plugin-van-ronald:move-finished-tasks-to-klaar": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
+  ],
+  "graph:open": [],
+  "plugin-van-ronald:switch-to-gtd-note": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "G"
+    }
+  ],
+  "plugin-van-ronald:move-tagged-tasks-to-gtd-notes": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "X"
+    }
+  ],
+  "plugin-van-ronald:toggle-prio-tag": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "P"
     }
   ]
 }

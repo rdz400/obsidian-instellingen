@@ -9,10 +9,10 @@ views:
         - datum >= (today() - duration('64d'))
     order:
       - file.name
+      - datum
       - file.folder
       - type
       - omschrijving
-      - datum
       - file.links
       - file.backlinks
       - gebieden
@@ -21,7 +21,7 @@ views:
       - property: datum
         direction: DESC
     columnSize:
-      file.name: 286
+      file.name: 351
       file.folder: 152
       note.type: 104
       note.omschrijving: 156

@@ -5,8 +5,8 @@
 }
 
 .breed {
-    --file-line-width: 900px;
-    --table-text-size: 0.8rem;
+    --file-line-width: 950px;
+    --table-text-size: 0.9rem;
 }
 
 .theme-light .breed {

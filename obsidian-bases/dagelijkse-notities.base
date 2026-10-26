@@ -16,8 +16,6 @@ views:
       - formula.project-links
       - formula.other-links
       - file.backlinks
-      - gewicht
-      - koffiebonen
       - links
     sort:
       - property: file.name

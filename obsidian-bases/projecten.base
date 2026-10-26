@@ -12,19 +12,21 @@ views:
     name: actief
     filters:
       and:
-        - status.containsAny("actief", "backlog")
+        - '!status.contains("klaar")'
     groupBy:
       property: status
       direction: ASC
+    groupOrder:
+      - actief
+      - refining
+      - backlog
     order:
       - file.name
       - status
       - formula.taken_backlinks
       - formula.Untitled
       - vandaag
-      - eind
       - datum
-      - herinnering
       - streefdatum
     sort:
       - property: formula.Untitled
@@ -34,7 +36,7 @@ views:
     columnSize:
       file.name: 422
       note.status: 110
-      formula.taken_backlinks: 243
+      formula.taken_backlinks: 151
       formula.Untitled: 100
       note.vandaag: 84
   - type: table
@@ -48,6 +50,7 @@ views:
       - datum
       - herinnering
       - formula.taken_backlinks
+      - tags
     sort:
       - property: herinnering
         direction: ASC
@@ -134,3 +137,76 @@ views:
     columnSize:
       file.name: 344
       note.status: 110
+  - type: kanban
+    name: kanban-streefdatum
+    filters:
+      and:
+        - '!status.containsAny("geannuleerd", "misschien", "klaar")'
+    groupBy:
+      property: streefdatum
+      direction: DESC
+    groupOrder:
+      - 2026-09-30
+      - 2026-10-01
+      - 2026-11-01
+      - 2026-12-01
+      - 2027-01-01
+    order:
+      - file.name
+    sort: []
+    columnSize:
+      file.name: 422
+      note.status: 110
+      formula.taken_backlinks: 243
+      formula.Untitled: 100
+      note.vandaag: 84
+    columnWidth: 290
+  - type: kanban
+    name: kanban-status
+    filters:
+      and:
+        - '!status.containsAny("geannuleerd", "klaar")'
+    groupBy:
+      property: status
+      direction: DESC
+    groupOrder:
+      - backlog
+      - refining
+      - actief
+      - nu
+    order:
+      - file.name
+    sort:
+      - property: vandaag
+        direction: DESC
+    columnSize:
+      file.name: 422
+      note.status: 110
+      formula.taken_backlinks: 243
+      formula.Untitled: 100
+      note.vandaag: 84
+    columnWidth: 290
+  - type: table
+    name: tabel-status
+    filters:
+      and:
+        - '!status.containsAny("geannuleerd", "klaar")'
+    groupBy:
+      property: status
+      direction: DESC
+    groupOrder:
+      - misschien
+      - backlog
+      - actief
+    order:
+      - file.name
+    sort:
+      - property: vandaag
+        direction: DESC
+    columnSize:
+      file.name: 422
+      note.status: 110
+      formula.taken_backlinks: 243
+      formula.Untitled: 100
+      note.vandaag: 84
+    columnWidth: 290

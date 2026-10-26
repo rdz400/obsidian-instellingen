@@ -7,21 +7,21 @@ views:
     filters:
       and:
         - file.hasLink(link(this.file))
-        - file.path.split('/')[0] != '0-dagelijks'
+        - type != "dagnotitie"
+        - type != "dagfocus"
     groupBy:
-      property: formula.root-folder
+      property: type
       direction: ASC
     order:
       - file.name
       - datum
-      - type
+      - gearchiveerd
     sort:
-      - property: file.name
-        direction: ASC
-      - property: file.links
-        direction: ASC
+      - property: datum
+        direction: DESC
     columnSize:
-      file.name: 335
+      file.name: 365
+      note.datum: 139
   - type: table
     name: InclusiefDagelijks
     filters:
@@ -64,3 +64,19 @@ views:
     columnSize:
       file.name: 335
     cardSize: 280
+  - type: cards
+    name: Table 2
+    filters:
+      and:
+        - file.hasLink(link(this.file))
+    groupBy:
+      property: type
+      direction: DESC
+    order:
+      - file.name
+      - datum
+    sort:
+      - property: file.links
+        direction: ASC
+    columnSize:
+      file.name: 241

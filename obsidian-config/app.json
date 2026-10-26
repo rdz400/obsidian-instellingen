@@ -20,14 +20,14 @@
     "editor:unindent-list",
     "editor:swap-line-up",
     "editor:swap-line-down",
+    "plugin-van-ronald:select-line",
+    "plugin-van-ronald:move-lines-to-top",
+    "plugin-van-ronald:move-lines-to-end",
     "command-palette:open",
     "editor:undo",
     "editor:configure-toolbar",
-    "editor:add-cursor-above",
-    "editor:add-cursor-below",
     "editor:toggle-bold",
     "editor:insert-horizontal-rule",
-    "plugin-van-ronald:toggle-nu-tag",
     "plugin-van-ronald:insert-tag"
   ],
   "vimMode": true,
@@ -49,5 +49,6 @@
   "mobileQuickRibbonItem": "",
   "mobilePullAction": "command-palette:open",
   "tabSize": 4,
-  "openBehavior": ""
+  "openBehavior": "",
+  "smartIndentList": true
 }

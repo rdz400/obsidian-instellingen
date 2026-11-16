@@ -90,8 +90,13 @@
     --font-text-size: 14px !important;
 }
 
+/* Bases tabel op mobiel: tekstcellen een tikje kleiner */
 body.is-mobile .bases-table-cell.bases-rendered-value {
-    font-size: 13px;
+    font-size: 11px;
+}
+
+body.is-mobile .bases-td {
+    --metadata-input-font-size: calc(var(--bases-table-font-size) * 0.92);
 }
 
 .theme-dark {

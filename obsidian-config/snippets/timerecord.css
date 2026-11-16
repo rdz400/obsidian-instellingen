@@ -1,0 +1,20 @@
+/*
+ * Time record notes (cssclasses: tijdsregistratie): set closer together, so
+ * more of a day fits on the screen. The time at the start of each record,
+ * coloured by the plugin, is made a little smaller.
+ */
+
+.tijdsregistratie {
+    --line-height-normal: 1.35;
+    --list-spacing: 0;
+    /* Less room around the day headings and between paragraphs. */
+    --p-spacing: 0.5rem;
+    --heading-spacing: 1rem;
+}
+
+/* The time pill: smaller text, and less padding above and below it. */
+.tijdsregistratie code.ronald-time-heat,
+.tijdsregistratie .cm-inline-code:has(> .ronald-time-heat) {
+    --code-size: 0.8em;
+    padding-block: 0.05em;
+}

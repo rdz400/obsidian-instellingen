@@ -16,7 +16,8 @@
     "main",
     "mobiel",
     "planning",
-    "taken"
+    "taken",
+    "timerecord"
   ],
   "baseFontSizeAction": true,
   "theme": "system",

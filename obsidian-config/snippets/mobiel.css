@@ -28,3 +28,8 @@
         }
     }
 }
+
+/* Smallere zijmarges rond de notitie op mobiel (standaard: --size-4-6 = 24px) */
+body.is-mobile {
+    --file-margins-x: var(--size-4-4);
+}

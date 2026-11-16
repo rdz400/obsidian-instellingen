@@ -734,5 +734,14 @@
       ],
       "key": "P"
     }
+  ],
+  "plugin-van-ronald:search-time-records": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
+      "key": "S"
+    }
   ]
 }

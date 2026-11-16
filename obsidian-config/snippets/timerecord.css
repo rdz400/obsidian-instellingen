@@ -12,6 +12,23 @@
     --heading-spacing: 1rem;
 }
 
+/*
+ * Mobile only: the bullets closer to the left edge, to save width on a small
+ * screen. Desktop keeps Obsidian's indent.
+ */
+
+/* Live Preview (default 0.75em). */
+.is-mobile .tijdsregistratie {
+    --list-indent-editing: var(--size-4-1);
+}
+
+/* Reading view. Obsidian indents list items there by a fixed 3ch, with the
+   bullet 0.8em to the left of the text. Only top-level items: nested lists
+   keep their normal indent. */
+.is-mobile .markdown-rendered.tijdsregistratie ul > li:not(li li) {
+    margin-inline-start: calc(var(--size-4-1) + 0.8em);
+}
+
 /* The time pill: smaller text, and less padding above and below it. */
 .tijdsregistratie code.ronald-time-heat,
 .tijdsregistratie .cm-inline-code:has(> .ronald-time-heat) {

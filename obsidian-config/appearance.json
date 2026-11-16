@@ -14,10 +14,10 @@
     "custom",
     "kleur",
     "main",
-    "mobiel",
     "planning",
     "taken",
-    "timerecord"
+    "timerecord",
+    "mobiel"
   ],
   "baseFontSizeAction": true,
   "theme": "system",

@@ -31,5 +31,19 @@
 
 /* Smallere zijmarges rond de notitie op mobiel (standaard: --size-4-6 = 24px) */
 body.is-mobile {
-    --file-margins-x: var(--size-4-4);
+    --file-margins-x: var(--size-4-4);   /* tablet: 16px */
+}
+
+/* Op een telefoon nog smaller */
+body.is-phone {
+    --file-margins-x: var(--size-4-2);   /* 8px */
+
+    /* Obsidian laat het eigenschappenblok op mobiel 12px aan beide kanten
+       uitsteken (width: 100% + 24px, translate -12px). Bij 8px marge steekt
+       het buiten beeld en kun je de notitie horizontaal verslepen.
+       Daarom: het blok net zo breed als de tekst. */
+    .metadata-content {
+        width: 100%;
+        transform: none;
+    }
 }
